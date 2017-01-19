@@ -38,7 +38,7 @@ class TVDB(object):
     _BASE_URI = 'https://api.thetvdb.com'
 
     def __init__(self, id=0, user=None, key=None):
-    	"""
+        """
         Initialize the base class.
         
         You can provide `id` that is the item id used for url creation. You can also 
@@ -49,10 +49,10 @@ class TVDB(object):
         the language id you want to use to retrieve the info.
         """
         self._ID = id
-    	self.USER = user
-    	"""Stores username if available"""
-    	self.USER_KEY = key
-    	"""Stores user-key if available"""
+        self.USER = user
+        """Stores username if available"""
+        self.USER_KEY = key
+        """Stores user-key if available"""
 
     def _get_path(self, key):
         return self._BASE_PATH + self._URLS[key]
@@ -93,7 +93,7 @@ class TVDB(object):
     def get_token(self, forceNew=False):
         """
         Get the existing token or creates it if it doesn't exist.
-		Returns the API token.
+        Returns the API token.
 
         If `forceNew` is true  the function will do a new login to retrieve the token.
         """
@@ -102,7 +102,7 @@ class TVDB(object):
             if not KEYS.API_KEY:
                 raise APIKeyError
 
-            if self.USER and self.USER_KEY:
+            if hasattr(self,"USER") and hasattr(self,"USER_KEY"):
                 data = {"apikey": KEYS.API_KEY, "username": self.USER, "userkey": self.USER_KEY}
             else:
                 data={"apikey": KEYS.API_KEY}
@@ -139,9 +139,7 @@ class TVDB(object):
                 return jsn['data']
             return jsn
         elif not forceNewToken:
-                return self._request(method=method, path=path, params=params, payload=payload, forceNewToken=True)
-        elif response.status_code == 404:
-            return []
+            return self._request(method=method, path=path, params=params, payload=payload, forceNewToken=True)
         try:
             raise Exception(response.json()['error'])
         except:
@@ -170,5 +168,5 @@ class TVDB(object):
         >>> show.title  # instead of response['title']
         """
         if isinstance(response, dict):
-            for key in response.keys():
+            for key in response:
                 setattr(self, key, response[key])

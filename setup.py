@@ -25,14 +25,14 @@ def read(fname):
 
 setup(
     name = 'tvdbsimple',
-    version = '1.0.0',
+    version = '1.0.1',
     author = 'phate89',
     author_email = 'phates89@gmail.com',
     description = 'A Python wrapper for TheTVDb Database API v2',
     keywords = ['show', 'series', 'seasons', 'the tv database', 'tv database', 'tvdb', 
                 'wrapper', 'database', 'thetvdb', 'api'],
     url = 'https://github.com/phate89/tvdbsimple',
-    download_url = 'https://github.com/phate89/tvdbsimple/tarball/1.0.0',
+    download_url = 'https://github.com/phate89/tvdbsimple/tarball/1.0.1',
     packages = ['tvdbsimple'],
     long_description=read('README.rst'),
     install_requires = ['requests'],
@@ -41,6 +41,10 @@ setup(
         "Intended Audience :: Developers",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
         "Topic :: Utilities"
     ],
 )

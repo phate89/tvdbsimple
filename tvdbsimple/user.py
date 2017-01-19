@@ -7,7 +7,7 @@ Allows to retrieve, add and delete user favorites and ratings.
 See [Users API section](https://api.thetvdb.com/swagger#!/Users)
 """
 
-from base import TVDB
+from .base import TVDB
 
 class User(TVDB):
     """

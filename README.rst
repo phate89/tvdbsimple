@@ -1,6 +1,9 @@
 TheTVDb wrapper module
 ======================
 
+.. image:: https://travis-ci.org/phate89/tvdbsimple.svg?branch=master
+   :target: https://travis-ci.org/phate89/tvdbsimple
+
 
 *tvdbsimple* is a wrapper, written in Python, for TheTVDB API v2.  By calling the functions available in *tvdbsimple* you can simplify your code and easily access a vast amount of tv series data.  To learn more about TheTVDb API, check out the `website api page`_.
 
@@ -11,7 +14,8 @@ Features
 
 - Full API implementation. Supports Search, Series, Episode, Updated, User and Languages methods.
 - Updated with the latest JSON API. 
-- Supports Python 2.7 (3.x python support will come).
+- Fully tested with automated tests and travis.ci.
+- Supports Python 2.7, 3.3, 3.4, 3.5, 3.6.
 - Easy to access data using Python class attributes.
 - Easy to experiment with *tvdbsimple* functions inside the Python interpreter.
 

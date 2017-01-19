@@ -7,7 +7,7 @@ Allows to retrieve updated series in a timespan.
 See [Updates API section](https://api.thetvdb.com/swagger#!/Updates)
 """
 
-from base import TVDB
+from .base import TVDB
 
 class Updates(TVDB):
     """

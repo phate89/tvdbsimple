@@ -1122,7 +1122,7 @@ table {
     <span class="n">_BASE_URI</span> <span class="o">=</span> <span class="s1">&#39;https://api.thetvdb.com&#39;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    	<span class="sd">&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize the base class.</span>
 <span class="sd">        </span>
 <span class="sd">        You can provide `id` that is the item id used for url creation. You can also </span>
@@ -1133,10 +1133,10 @@ table {
 <span class="sd">        the language id you want to use to retrieve the info.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ID</span> <span class="o">=</span> <span class="nb">id</span>
-    	<span class="bp">self</span><span class="o">.</span><span class="n">USER</span> <span class="o">=</span> <span class="n">user</span>
-    	<span class="sd">&quot;&quot;&quot;Stores username if available&quot;&quot;&quot;</span>
-    	<span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span> <span class="o">=</span> <span class="n">key</span>
-    	<span class="sd">&quot;&quot;&quot;Stores user-key if available&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">USER</span> <span class="o">=</span> <span class="n">user</span>
+        <span class="sd">&quot;&quot;&quot;Stores username if available&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span> <span class="o">=</span> <span class="n">key</span>
+        <span class="sd">&quot;&quot;&quot;Stores user-key if available&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">_get_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_BASE_PATH</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_URLS</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
@@ -1177,7 +1177,7 @@ table {
     <span class="k">def</span> <span class="nf">get_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">forceNew</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the existing token or creates it if it doesn&#39;t exist.</span>
-<span class="sd">		Returns the API token.</span>
+<span class="sd">        Returns the API token.</span>
 
 <span class="sd">        If `forceNew` is true  the function will do a new login to retrieve the token.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1186,7 +1186,7 @@ table {
             <span class="k">if</span> <span class="ow">not</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="n">APIKeyError</span>
 
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">&quot;USER&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">&quot;USER_KEY&quot;</span><span class="p">):</span>
                 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;apikey&quot;</span><span class="p">:</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">,</span> <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER</span><span class="p">,</span> <span class="s2">&quot;userkey&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span><span class="p">}</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;apikey&quot;</span><span class="p">:</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">}</span>
@@ -1223,9 +1223,7 @@ table {
                 <span class="k">return</span> <span class="n">jsn</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
             <span class="k">return</span> <span class="n">jsn</span>
         <span class="k">elif</span> <span class="ow">not</span> <span class="n">forceNewToken</span><span class="p">:</span>
-                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">payload</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">forceNewToken</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
-            <span class="k">return</span> <span class="p">[]</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">payload</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">forceNewToken</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;error&#39;</span><span class="p">])</span>
         <span class="k">except</span><span class="p">:</span>
@@ -1254,7 +1252,7 @@ table {
 <span class="sd">        &gt;&gt;&gt; show.title  # instead of response[&#39;title&#39;]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">response</span><span class="p">:</span>
                 <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">response</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
 </pre></div>
 
@@ -1392,7 +1390,7 @@ table {
     <span class="n">_BASE_URI</span> <span class="o">=</span> <span class="s1">&#39;https://api.thetvdb.com&#39;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    	<span class="sd">&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize the base class.</span>
 <span class="sd">        </span>
 <span class="sd">        You can provide `id` that is the item id used for url creation. You can also </span>
@@ -1403,10 +1401,10 @@ table {
 <span class="sd">        the language id you want to use to retrieve the info.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ID</span> <span class="o">=</span> <span class="nb">id</span>
-    	<span class="bp">self</span><span class="o">.</span><span class="n">USER</span> <span class="o">=</span> <span class="n">user</span>
-    	<span class="sd">&quot;&quot;&quot;Stores username if available&quot;&quot;&quot;</span>
-    	<span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span> <span class="o">=</span> <span class="n">key</span>
-    	<span class="sd">&quot;&quot;&quot;Stores user-key if available&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">USER</span> <span class="o">=</span> <span class="n">user</span>
+        <span class="sd">&quot;&quot;&quot;Stores username if available&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span> <span class="o">=</span> <span class="n">key</span>
+        <span class="sd">&quot;&quot;&quot;Stores user-key if available&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">_get_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_BASE_PATH</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_URLS</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
@@ -1447,7 +1445,7 @@ table {
     <span class="k">def</span> <span class="nf">get_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">forceNew</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the existing token or creates it if it doesn&#39;t exist.</span>
-<span class="sd">		Returns the API token.</span>
+<span class="sd">        Returns the API token.</span>
 
 <span class="sd">        If `forceNew` is true  the function will do a new login to retrieve the token.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1456,7 +1454,7 @@ table {
             <span class="k">if</span> <span class="ow">not</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="n">APIKeyError</span>
 
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">&quot;USER&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">&quot;USER_KEY&quot;</span><span class="p">):</span>
                 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;apikey&quot;</span><span class="p">:</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">,</span> <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER</span><span class="p">,</span> <span class="s2">&quot;userkey&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span><span class="p">}</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;apikey&quot;</span><span class="p">:</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">}</span>
@@ -1493,9 +1491,7 @@ table {
                 <span class="k">return</span> <span class="n">jsn</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
             <span class="k">return</span> <span class="n">jsn</span>
         <span class="k">elif</span> <span class="ow">not</span> <span class="n">forceNewToken</span><span class="p">:</span>
-                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">payload</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">forceNewToken</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
-            <span class="k">return</span> <span class="p">[]</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">payload</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">forceNewToken</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;error&#39;</span><span class="p">])</span>
         <span class="k">except</span><span class="p">:</span>
@@ -1524,7 +1520,7 @@ table {
 <span class="sd">        &gt;&gt;&gt; show.title  # instead of response[&#39;title&#39;]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">response</span><span class="p">:</span>
                 <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">response</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
 </pre></div>
 
@@ -1582,7 +1578,7 @@ the language id you want to use to retrieve the info.</p></div>
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.base.TVDB.__init__', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.base.TVDB.__init__" class="source">
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-	<span class="sd">&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Initialize the base class.</span>
 <span class="sd">    </span>
 <span class="sd">    You can provide `id` that is the item id used for url creation. You can also </span>
@@ -1593,10 +1589,10 @@ the language id you want to use to retrieve the info.</p></div>
 <span class="sd">    the language id you want to use to retrieve the info.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_ID</span> <span class="o">=</span> <span class="nb">id</span>
-	<span class="bp">self</span><span class="o">.</span><span class="n">USER</span> <span class="o">=</span> <span class="n">user</span>
-	<span class="sd">&quot;&quot;&quot;Stores username if available&quot;&quot;&quot;</span>
-	<span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span> <span class="o">=</span> <span class="n">key</span>
-	<span class="sd">&quot;&quot;&quot;Stores user-key if available&quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">USER</span> <span class="o">=</span> <span class="n">user</span>
+    <span class="sd">&quot;&quot;&quot;Stores username if available&quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span> <span class="o">=</span> <span class="n">key</span>
+    <span class="sd">&quot;&quot;&quot;Stores user-key if available&quot;&quot;&quot;</span>
 </pre></div>
 
   </div>
@@ -1614,7 +1610,7 @@ the language id you want to use to retrieve the info.</p></div>
     
   
     <div class="desc"><p>Get the existing token or creates it if it doesn't exist.
-        Returns the API token.</p>
+Returns the API token.</p>
 <p>If <code>forceNew</code> is true  the function will do a new login to retrieve the token.</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.base.TVDB.get_token', this);">Show source &equiv;</a></p>
@@ -1622,14 +1618,14 @@ the language id you want to use to retrieve the info.</p></div>
     <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">get_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">forceNew</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get the existing token or creates it if it doesn&#39;t exist.</span>
-<span class="sd">turns the API token.</span>
+<span class="sd">    Returns the API token.</span>
 <span class="sd">    If `forceNew` is true  the function will do a new login to retrieve the token.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">KEYS</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span> <span class="ow">or</span> <span class="n">forceNew</span><span class="p">:</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">APIKeyError</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">&quot;USER&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">&quot;USER_KEY&quot;</span><span class="p">):</span>
             <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;apikey&quot;</span><span class="p">:</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">,</span> <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER</span><span class="p">,</span> <span class="s2">&quot;userkey&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span><span class="p">}</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;apikey&quot;</span><span class="p">:</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">}</span>

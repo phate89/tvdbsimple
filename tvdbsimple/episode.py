@@ -7,7 +7,7 @@ Allows to retrieve episode detailed info.
 See [Episodes API section](https://api.thetvdb.com/swagger#!/Episodes)
 """
 
-from base import TVDB
+from .base import TVDB
 
 class Episode(TVDB):
     """

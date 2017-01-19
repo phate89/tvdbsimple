@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+
+"""
+keys.py
+~~~~~~~
+
+This file contains the private keys for tvdbsimple.
+"""
+
+API_KEY = ''
+USER = ''
+USER_KEY = ''

@@ -11,7 +11,8 @@ Features
 
 - Full API implementation. Supports Search, Series, Episode, Updated, User and Languages methods.
 - Updated with the latest JSON API. 
-- Supports Python 2.7 (3.x python support will come).
+- Fully tested with automated tests and travis.ci.
+- Supports Python 2.7, 3.3, 3.4, 3.5, 3.6.
 - Easy to access data using Python class attributes.
 - Easy to experiment with `tvdbsimple` functions inside the Python interpreter.
 
@@ -48,7 +49,7 @@ copyright (c) 2017 by phate89.
 """
 
 __title__ = 'tvdbsimple'
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __author__ = 'phate89'
 __copyright__ = 'Copyright © 2017 phate89'
 __license__ = 'GPLv3'

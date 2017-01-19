@@ -7,7 +7,7 @@ Allows to retrieve series info, actors, basic episodes info and images.
 See [Series API section](https://api.thetvdb.com/swagger#/Series)
 """
 
-from base import TVDB
+from .base import TVDB
 
 class Series(TVDB):
     """

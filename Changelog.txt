@@ -1,0 +1,10 @@
+Changelog
+---------
+
+1.0.1:
+- Added support for 3.x
+- Added automated tests
+- Changed return in case of 404
+
+1.0.0:
+- Initial version
