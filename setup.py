@@ -14,26 +14,25 @@ from os import path
 
 def read(fname):
 
-    here = path.abspath(path.dirname(__file__))
-
+    here = path.join(path.abspath(path.dirname(__file__)), fname)
     txt = ''
     if (path.isfile(here)):
         # Get the long description from the README file
-        with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+        with open(here, encoding='utf-8') as f:
             txt= f.read()
     return txt
 
 setup(
     name = 'tvdbsimple',
-    version = '1.0.2',
+    version = '1.0.4',
     author = 'phate89',
     author_email = 'phates89@gmail.com',
     description = 'A Python wrapper for TheTVDb Database API v2',
-    keywords = ['show', 'series', 'seasons', 'the tv database', 'tv database', 'tvdb', 
-                'wrapper', 'database', 'thetvdb', 'api'],
+    keywords = 'show series seasons tv database tvdb wrapper thetvdb api',
     url = 'https://github.com/phate89/tvdbsimple',
-    download_url = 'https://github.com/phate89/tvdbsimple/tarball/1.0.2',
+    download_url = 'https://github.com/phate89/tvdbsimple/tarball/1.0.4',
     packages = ['tvdbsimple'],
+    license='GPLv3',
     long_description=read('README.rst'),
     install_requires = ['requests'],
     classifiers = [

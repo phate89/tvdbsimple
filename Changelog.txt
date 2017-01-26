@@ -1,6 +1,9 @@
 Changelog
 ---------
 
+1.0.4:
+- Fixed setup.py to get all the info of the package
+
 1.0.2:
 - Fixed a bug in paging for episodes/user favorites
 
