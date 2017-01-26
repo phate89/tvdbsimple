@@ -285,7 +285,7 @@ class User_Ratings(TVDB):
         
         filters = self._FILTERS.copy()
         filters['page'] = page
-        response = self._GET(path, params=self._FILTERS, cleanJson=False)
+        response = self._GET(path, params=filters, cleanJson=False)
         if 'links' in response and 'last' in response['links']:
             self._PAGES = response['links']['last']
 

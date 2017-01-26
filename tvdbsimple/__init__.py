@@ -49,7 +49,7 @@ copyright (c) 2017 by phate89.
 """
 
 __title__ = 'tvdbsimple'
-__version__ = '1.0.1'
+__version__ = '1.0.2'
 __author__ = 'phate89'
 __copyright__ = 'Copyright © 2017 phate89'
 __license__ = 'GPLv3'
