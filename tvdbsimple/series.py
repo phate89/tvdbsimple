@@ -132,7 +132,10 @@ class Series_Episodes(TVDB):
         """
         super(Series_Episodes, self).__init__(id)
         self._set_language(language)
+        self._FILTERS = {}
         self.update_filters(**kwargs)
+        self._PAGES = -1
+        self._PAGES_LIST = {}
 
     def update_filters(self, **kwargs):
         """
