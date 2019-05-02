@@ -16,7 +16,7 @@ class Search(TVDB):
     _BASE_PATH = 'search'
     _URLS = {
         'series': '/series',
-        'seriesparams': '/series/params'
+        'series_params': '/series/params'
     }
 
     def series(self, name='', imdbId='', zap2itId='', language=''):

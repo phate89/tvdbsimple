@@ -17,7 +17,7 @@ class Updates(TVDB):
     _BASE_PATH = 'updated'
     _URLS = {
         'query': '/query',
-        'params': '/query/params'
+        'update_params': '/query/params'
     }
     _FILTERS = {}
 
