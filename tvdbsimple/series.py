@@ -319,7 +319,7 @@ class Series_Images(TVDB):
         path = self._get_id_path('summary')
         
         response = self._GET(path)
-        # self._set_attrs_to_values(response)
+        self._set_attrs_to_values(response)
         return response
 
     def query_params(self):
