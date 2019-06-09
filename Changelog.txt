@@ -1,6 +1,11 @@
 Changelog
 ---------
 
+1.0.6:
+- Fixed dict case error in retrieving error message (thx rmartin16)
+- Fixed variable to make query_params and series_params actually work (thx rmartin16)
+- Convert class variables into instance variables to make the class work more than one time (thx 3lixy and rmartin16)
+
 1.0.4:
 - Fixed setup.py to get all the info of the package
 
