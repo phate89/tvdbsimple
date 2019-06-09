@@ -106,9 +106,6 @@ class Series_Episodes(TVDB):
         'query': '/{id}/episodes/query',
         'query_params': '/{id}/episodes/query/params'
     }
-    _PAGES = -1
-    _PAGES_LIST = {}
-    _FILTERS = {}
 
     def __init__(self, id, language='', **kwargs):
         """
@@ -154,6 +151,8 @@ class Series_Episodes(TVDB):
         You can  provide `imdbId` to get only episodes with the 
         provided imdb id.
         """
+        self._PAGES = -1
+        self._PAGES_LIST = {}
         self._FILTERS=kwargs
 
     def summary(self):
@@ -269,7 +268,6 @@ class Series_Images(TVDB):
         'summary': '/{id}/images',
         'query_params': '/{id}/images/query/params'
     }
-    _FILTERS = {}
 
     def __init__(self, id, language='', **kwargs):
         """

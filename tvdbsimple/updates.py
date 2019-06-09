@@ -19,7 +19,6 @@ class Updates(TVDB):
         'query': '/query',
         'update_params': '/query/params'
     }
-    _FILTERS = {}
 
     def __init__(self, fromTime, toTime='', language=''):
         """
@@ -30,6 +29,7 @@ class Updates(TVDB):
         You can also set `language` with a language id to get the result 
         in the specific language.
         """
+        self._FILTERS = {}
         self.update_filters(fromTime, toTime, language)
 
     def update_filters(self, fromTime='', toTime='', language=''):
