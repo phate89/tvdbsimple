@@ -116,7 +116,7 @@ class TVDB(object):
             else:
                 error = "Unknown error while authenticating. Check your api key or your user/userkey"
                 try:
-                    error = response.json()['error']
+                    error = response.json()['Error']
                 except:
                     pass
                 raise AuthenticationError(error)
@@ -141,7 +141,7 @@ class TVDB(object):
         elif not forceNewToken:
             return self._request(method=method, path=path, params=params, payload=payload, forceNewToken=True)
         try:
-            raise Exception(response.json()['error'])
+            raise Exception(response.json()['Error'])
         except:
             response.raise_for_status()
 

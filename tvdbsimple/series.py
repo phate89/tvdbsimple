@@ -104,7 +104,7 @@ class Series_Episodes(TVDB):
         'summary': '/{id}/episodes/summary',
         'episodes': '/{id}/episodes',
         'query': '/{id}/episodes/query',
-        'queryparams': '/{id}/episodes/query/params'
+        'query_params': '/{id}/episodes/query/params'
     }
     _PAGES = -1
     _PAGES_LIST = {}
@@ -267,7 +267,7 @@ class Series_Images(TVDB):
     _URLS = {
         'imagequery': '/{id}/images/query',
         'summary': '/{id}/images',
-        'queryparams': '/{id}/images/query/params'
+        'query_params': '/{id}/images/query/params'
     }
     _FILTERS = {}
 
@@ -321,7 +321,7 @@ class Series_Images(TVDB):
         path = self._get_id_path('summary')
         
         response = self._GET(path)
-        self._set_attrs_to_values(response)
+        # self._set_attrs_to_values(response)
         return response
 
     def query_params(self):
