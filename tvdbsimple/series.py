@@ -106,6 +106,9 @@ class Series_Episodes(TVDB):
         'query': '/{id}/episodes/query',
         'query_params': '/{id}/episodes/query/params'
     }
+    _PAGES = -1
+    _PAGES_LIST = {}
+    _FILTERS = {}
 
     def __init__(self, id, language='', **kwargs):
         """
@@ -130,10 +133,6 @@ class Series_Episodes(TVDB):
         super(Series_Episodes, self).__init__(id)
         self._set_language(language)
         self.update_filters(**kwargs)
-
-        self._PAGES = -1
-        self._PAGES_LIST = {}
-        self._FILTERS = {}
 
     def update_filters(self, **kwargs):
         """

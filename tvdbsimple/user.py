@@ -147,6 +147,9 @@ class User_Ratings(TVDB):
         'add': '/{itemType}/{itemId}/{itemRating}',
         'delete': '/{itemType}/{itemId}'
     }
+    _PAGES = -1
+    _PAGES_LIST = {}
+    _FILTERS = {}
 
     def __init__(self, user, key, **kwargs):
         """
@@ -161,10 +164,6 @@ class User_Ratings(TVDB):
         super(User_Ratings, self).__init__(user=user, key=key)
         self._FILTERS = {}
         self.update_filters(**kwargs)
-
-        self._PAGES = -1
-        self._PAGES_LIST = {}
-        self._FILTERS = {}
 
     def update_filters(self, **kwargs):
         """
