@@ -7,7 +7,7 @@
     <meta name="description" content="This module implements the Updates functionality of TheTVDb API.
 Allows to retrieve updated series i..." />
 
-  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
   
   <style type="text/css">
   
@@ -852,73 +852,6 @@ table {
 
   </style>
 
-  <style type="text/css">
-  .codehilite .hll { background-color: #ffffcc }
-.codehilite  { background: #f8f8f8; }
-.codehilite .c { color: #408080; font-style: italic } /* Comment */
-.codehilite .err { border: 1px solid #FF0000 } /* Error */
-.codehilite .k { color: #008000; font-weight: bold } /* Keyword */
-.codehilite .o { color: #666666 } /* Operator */
-.codehilite .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.codehilite .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.codehilite .cp { color: #BC7A00 } /* Comment.Preproc */
-.codehilite .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.codehilite .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.codehilite .cs { color: #408080; font-style: italic } /* Comment.Special */
-.codehilite .gd { color: #A00000 } /* Generic.Deleted */
-.codehilite .ge { font-style: italic } /* Generic.Emph */
-.codehilite .gr { color: #FF0000 } /* Generic.Error */
-.codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.codehilite .gi { color: #00A000 } /* Generic.Inserted */
-.codehilite .go { color: #888888 } /* Generic.Output */
-.codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.codehilite .gs { font-weight: bold } /* Generic.Strong */
-.codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.codehilite .gt { color: #0044DD } /* Generic.Traceback */
-.codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.codehilite .kp { color: #008000 } /* Keyword.Pseudo */
-.codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.codehilite .kt { color: #B00040 } /* Keyword.Type */
-.codehilite .m { color: #666666 } /* Literal.Number */
-.codehilite .s { color: #BA2121 } /* Literal.String */
-.codehilite .na { color: #7D9029 } /* Name.Attribute */
-.codehilite .nb { color: #008000 } /* Name.Builtin */
-.codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.codehilite .no { color: #880000 } /* Name.Constant */
-.codehilite .nd { color: #AA22FF } /* Name.Decorator */
-.codehilite .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.codehilite .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-.codehilite .nf { color: #0000FF } /* Name.Function */
-.codehilite .nl { color: #A0A000 } /* Name.Label */
-.codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.codehilite .nv { color: #19177C } /* Name.Variable */
-.codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.codehilite .w { color: #bbbbbb } /* Text.Whitespace */
-.codehilite .mb { color: #666666 } /* Literal.Number.Bin */
-.codehilite .mf { color: #666666 } /* Literal.Number.Float */
-.codehilite .mh { color: #666666 } /* Literal.Number.Hex */
-.codehilite .mi { color: #666666 } /* Literal.Number.Integer */
-.codehilite .mo { color: #666666 } /* Literal.Number.Oct */
-.codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
-.codehilite .sc { color: #BA2121 } /* Literal.String.Char */
-.codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
-.codehilite .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-.codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.codehilite .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-.codehilite .sx { color: #008000 } /* Literal.String.Other */
-.codehilite .sr { color: #BB6688 } /* Literal.String.Regex */
-.codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
-.codehilite .ss { color: #19177C } /* Literal.String.Symbol */
-.codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.codehilite .vc { color: #19177C } /* Name.Variable.Class */
-.codehilite .vg { color: #19177C } /* Name.Variable.Global */
-.codehilite .vi { color: #19177C } /* Name.Variable.Instance */
-.codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
-  </style>
 
   <style type="text/css">
   
@@ -1076,82 +1009,81 @@ Allows to retrieve updated series in a timespan.</p>
   
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.updates', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.updates" class="source">
-    <div class="codehilite"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+    <pre><code># -*- coding: utf-8 -*-
 
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">This module implements the Updates functionality of TheTVDb API.</span>
-<span class="sd">Allows to retrieve updated series in a timespan.</span>
+"""
+This module implements the Updates functionality of TheTVDb API.
+Allows to retrieve updated series in a timespan.
 
-<span class="sd">See [Updates API section](https://api.thetvdb.com/swagger#!/Updates)</span>
-<span class="sd">&quot;&quot;&quot;</span>
+See [Updates API section](https://api.thetvdb.com/swagger#!/Updates)
+"""
 
-<span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="n">TVDB</span>
+from .base import TVDB
 
-<span class="k">class</span> <span class="nc">Updates</span><span class="p">(</span><span class="n">TVDB</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Updates class to retrieve updated series in a timespan.</span>
-<span class="sd">    Requires `fromTime` that is the starting date of the updates.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_BASE_PATH</span> <span class="o">=</span> <span class="s1">&#39;updated&#39;</span>
-    <span class="n">_URLS</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="s1">&#39;/query&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;params&#39;</span><span class="p">:</span> <span class="s1">&#39;/query/params&#39;</span>
-    <span class="p">}</span>
-    <span class="n">_FILTERS</span> <span class="o">=</span> <span class="p">{}</span>
+class Updates(TVDB):
+    """
+    Updates class to retrieve updated series in a timespan.
+    Requires `fromTime` that is the starting date of the updates.
+    """
+    _BASE_PATH = 'updated'
+    _URLS = {
+        'query': '/query',
+        'params': '/query/params'
+    }
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fromTime</span><span class="p">,</span> <span class="n">toTime</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Initialize the Updates class.</span>
-<span class="sd">        `fromTime` is the epoch time to start your date range to search for.</span>
-<span class="sd">        You can set `toTime` to set the epoch time to end your date range. </span>
-<span class="sd">        Must be one week from `fromTime`.</span>
-<span class="sd">        You can also set `language` with a language id to get the result </span>
-<span class="sd">        in the specific language.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">update_filters</span><span class="p">(</span><span class="n">fromTime</span><span class="p">,</span> <span class="n">toTime</span><span class="p">,</span> <span class="n">language</span><span class="p">)</span>
+    def __init__(self, fromTime, toTime='', language=''):
+        """
+        Initialize the Updates class.
+        `fromTime` is the epoch time to start your date range to search for.
+        You can set `toTime` to set the epoch time to end your date range. 
+        Must be one week from `fromTime`.
+        You can also set `language` with a language id to get the result 
+        in the specific language.
+        """
+        self._FILTERS = {}
+        self.update_filters(fromTime, toTime, language)
 
-    <span class="k">def</span> <span class="nf">update_filters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fromTime</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">toTime</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Updates the filters for the updates class.</span>
+    def update_filters(self, fromTime='', toTime='', language=''):
+        """
+        Updates the filters for the updates class.
 
-<span class="sd">        `fromTime` is the epoch time to start your date range to search for.</span>
-<span class="sd">        You can set `toTime` to set the epoch time to end your date range. </span>
-<span class="sd">        Must be one week from `fromTime`.</span>
-<span class="sd">        You can also set `language` with a language id to get the result </span>
-<span class="sd">        in the specific language.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">fromTime</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">[</span><span class="s1">&#39;fromTime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fromTime</span>
-        <span class="k">if</span> <span class="n">fromTime</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">[</span><span class="s1">&#39;toTime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">toTime</span>
-        <span class="k">if</span> <span class="n">language</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_set_language</span><span class="p">(</span><span class="n">language</span><span class="p">)</span>
+        `fromTime` is the epoch time to start your date range to search for.
+        You can set `toTime` to set the epoch time to end your date range. 
+        Must be one week from `fromTime`.
+        You can also set `language` with a language id to get the result 
+        in the specific language.
+        """
+        if fromTime:
+            self._FILTERS['fromTime'] = fromTime
+        if fromTime:
+            self._FILTERS['toTime'] = toTime
+        if language:
+            self._set_language(language)
 
-    <span class="k">def</span> <span class="nf">series</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the series updated in the set time span (maximom one week from fromTime).</span>
+    def series(self):
+        """
+        Get the series updated in the set time span (maximom one week from fromTime).
 
-<span class="sd">        Returns a list of series updated in the timespan with basic info</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;query&#39;</span><span class="p">)</span>
+        Returns a list of series updated in the timespan with basic info
+        """
+        path = self._get_path('query')
         
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">({</span><span class="s1">&#39;series&#39;</span><span class="p">:</span> <span class="n">response</span><span class="p">})</span>
-        <span class="k">return</span> <span class="n">response</span>
+        response = self._GET(path, params=self._FILTERS)
+        self._set_attrs_to_values({'series': response})
+        return response
 
-    <span class="k">def</span> <span class="nf">update_params</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the filters available for the updated api.</span>
+    def update_params(self):
+        """
+        Get the filters available for the updated api.
 
-<span class="sd">        Returns a list of filters available for updates.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;update_params&#39;</span><span class="p">)</span>
+        Returns a list of filters available for updates.
+        """
+        path = self._get_path('update_params')
         
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">({</span><span class="s1">&#39;update_params&#39;</span><span class="p">:</span> <span class="n">response</span><span class="p">})</span>
-        <span class="k">return</span> <span class="n">response</span>
-</pre></div>
-
+        response = self._GET(path)
+        self._set_attrs_to_values({'update_params': response})
+        return response
+</code></pre>
   </div>
 
   </header>
@@ -1170,71 +1102,70 @@ Requires <code>fromTime</code> that is the starting date of the updates.</p></di
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.updates.Updates', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.updates.Updates" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Updates</span><span class="p">(</span><span class="n">TVDB</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Updates class to retrieve updated series in a timespan.</span>
-<span class="sd">    Requires `fromTime` that is the starting date of the updates.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_BASE_PATH</span> <span class="o">=</span> <span class="s1">&#39;updated&#39;</span>
-    <span class="n">_URLS</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="s1">&#39;/query&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;params&#39;</span><span class="p">:</span> <span class="s1">&#39;/query/params&#39;</span>
-    <span class="p">}</span>
-    <span class="n">_FILTERS</span> <span class="o">=</span> <span class="p">{}</span>
+    <pre><code>class Updates(TVDB):
+    """
+    Updates class to retrieve updated series in a timespan.
+    Requires `fromTime` that is the starting date of the updates.
+    """
+    _BASE_PATH = 'updated'
+    _URLS = {
+        'query': '/query',
+        'params': '/query/params'
+    }
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fromTime</span><span class="p">,</span> <span class="n">toTime</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Initialize the Updates class.</span>
-<span class="sd">        `fromTime` is the epoch time to start your date range to search for.</span>
-<span class="sd">        You can set `toTime` to set the epoch time to end your date range. </span>
-<span class="sd">        Must be one week from `fromTime`.</span>
-<span class="sd">        You can also set `language` with a language id to get the result </span>
-<span class="sd">        in the specific language.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">update_filters</span><span class="p">(</span><span class="n">fromTime</span><span class="p">,</span> <span class="n">toTime</span><span class="p">,</span> <span class="n">language</span><span class="p">)</span>
+    def __init__(self, fromTime, toTime='', language=''):
+        """
+        Initialize the Updates class.
+        `fromTime` is the epoch time to start your date range to search for.
+        You can set `toTime` to set the epoch time to end your date range. 
+        Must be one week from `fromTime`.
+        You can also set `language` with a language id to get the result 
+        in the specific language.
+        """
+        self._FILTERS = {}
+        self.update_filters(fromTime, toTime, language)
 
-    <span class="k">def</span> <span class="nf">update_filters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fromTime</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">toTime</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Updates the filters for the updates class.</span>
+    def update_filters(self, fromTime='', toTime='', language=''):
+        """
+        Updates the filters for the updates class.
 
-<span class="sd">        `fromTime` is the epoch time to start your date range to search for.</span>
-<span class="sd">        You can set `toTime` to set the epoch time to end your date range. </span>
-<span class="sd">        Must be one week from `fromTime`.</span>
-<span class="sd">        You can also set `language` with a language id to get the result </span>
-<span class="sd">        in the specific language.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">fromTime</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">[</span><span class="s1">&#39;fromTime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fromTime</span>
-        <span class="k">if</span> <span class="n">fromTime</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">[</span><span class="s1">&#39;toTime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">toTime</span>
-        <span class="k">if</span> <span class="n">language</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_set_language</span><span class="p">(</span><span class="n">language</span><span class="p">)</span>
+        `fromTime` is the epoch time to start your date range to search for.
+        You can set `toTime` to set the epoch time to end your date range. 
+        Must be one week from `fromTime`.
+        You can also set `language` with a language id to get the result 
+        in the specific language.
+        """
+        if fromTime:
+            self._FILTERS['fromTime'] = fromTime
+        if fromTime:
+            self._FILTERS['toTime'] = toTime
+        if language:
+            self._set_language(language)
 
-    <span class="k">def</span> <span class="nf">series</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the series updated in the set time span (maximom one week from fromTime).</span>
+    def series(self):
+        """
+        Get the series updated in the set time span (maximom one week from fromTime).
 
-<span class="sd">        Returns a list of series updated in the timespan with basic info</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;query&#39;</span><span class="p">)</span>
+        Returns a list of series updated in the timespan with basic info
+        """
+        path = self._get_path('query')
         
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">({</span><span class="s1">&#39;series&#39;</span><span class="p">:</span> <span class="n">response</span><span class="p">})</span>
-        <span class="k">return</span> <span class="n">response</span>
+        response = self._GET(path, params=self._FILTERS)
+        self._set_attrs_to_values({'series': response})
+        return response
 
-    <span class="k">def</span> <span class="nf">update_params</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the filters available for the updated api.</span>
+    def update_params(self):
+        """
+        Get the filters available for the updated api.
 
-<span class="sd">        Returns a list of filters available for updates.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;update_params&#39;</span><span class="p">)</span>
+        Returns a list of filters available for updates.
+        """
+        path = self._get_path('update_params')
         
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">({</span><span class="s1">&#39;update_params&#39;</span><span class="p">:</span> <span class="n">response</span><span class="p">})</span>
-        <span class="k">return</span> <span class="n">response</span>
-</pre></div>
-
+        response = self._GET(path)
+        self._set_attrs_to_values({'update_params': response})
+        return response
+</code></pre>
   </div>
 </div>
 
@@ -1244,9 +1175,9 @@ Requires <code>fromTime</code> that is the starting date of the updates.</p></di
           <ul class="class_list">
           <li><a href="#tvdbsimple.updates.Updates">Updates</a></li>
           <li>tvdbsimple.base.TVDB</li>
-          <li>__builtin__.object</li>
+          <li>builtins.object</li>
           </ul>
-          <h3>Methods</h3>
+          <h3>Static methods</h3>
             
   <div class="item">
     <div class="name def" id="tvdbsimple.updates.Updates.__init__">
@@ -1265,18 +1196,18 @@ in the specific language.</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.updates.Updates.__init__', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.updates.Updates.__init__" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fromTime</span><span class="p">,</span> <span class="n">toTime</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Initialize the Updates class.</span>
-<span class="sd">    `fromTime` is the epoch time to start your date range to search for.</span>
-<span class="sd">    You can set `toTime` to set the epoch time to end your date range. </span>
-<span class="sd">    Must be one week from `fromTime`.</span>
-<span class="sd">    You can also set `language` with a language id to get the result </span>
-<span class="sd">    in the specific language.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">update_filters</span><span class="p">(</span><span class="n">fromTime</span><span class="p">,</span> <span class="n">toTime</span><span class="p">,</span> <span class="n">language</span><span class="p">)</span>
-</pre></div>
-
+    <pre><code>def __init__(self, fromTime, toTime='', language=''):
+    """
+    Initialize the Updates class.
+    `fromTime` is the epoch time to start your date range to search for.
+    You can set `toTime` to set the epoch time to end your date range. 
+    Must be one week from `fromTime`.
+    You can also set `language` with a language id to get the result 
+    in the specific language.
+    """
+    self._FILTERS = {}
+    self.update_filters(fromTime, toTime, language)
+</code></pre>
   </div>
 </div>
 
@@ -1297,36 +1228,35 @@ Returns the API token.</p>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.updates.Updates.get_token', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.updates.Updates.get_token" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">get_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">forceNew</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get the existing token or creates it if it doesn&#39;t exist.</span>
-<span class="sd">    Returns the API token.</span>
-<span class="sd">    If `forceNew` is true  the function will do a new login to retrieve the token.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">KEYS</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span> <span class="ow">or</span> <span class="n">forceNew</span><span class="p">:</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">APIKeyError</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">&quot;USER&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">&quot;USER_KEY&quot;</span><span class="p">):</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;apikey&quot;</span><span class="p">:</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">,</span> <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER</span><span class="p">,</span> <span class="s2">&quot;userkey&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span><span class="p">}</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;apikey&quot;</span><span class="p">:</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">}</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
-                <span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_complete_url</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">),</span> 
-                <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> 
-                <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_headers</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
-            <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">error</span> <span class="o">=</span> <span class="s2">&quot;Unknown error while authenticating. Check your api key or your user/userkey&quot;</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">error</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span>
-            <span class="k">except</span><span class="p">:</span>
-                <span class="k">pass</span>
-            <span class="k">raise</span> <span class="n">AuthenticationError</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span>
-</pre></div>
-
+    <pre><code>def get_token(self, forceNew=False):
+    """
+    Get the existing token or creates it if it doesn't exist.
+    Returns the API token.
+    If `forceNew` is true  the function will do a new login to retrieve the token.
+    """
+    from . import KEYS
+    if not KEYS.API_TOKEN or forceNew:
+        if not KEYS.API_KEY:
+            raise APIKeyError
+        if hasattr(self,"USER") and hasattr(self,"USER_KEY"):
+            data = {"apikey": KEYS.API_KEY, "username": self.USER, "userkey": self.USER_KEY}
+        else:
+            data={"apikey": KEYS.API_KEY}
+        response = requests.request(
+                'POST', self._get_complete_url('login'), 
+                data=json.dumps(data), 
+                headers=self._headers)
+        if response.status_code == 200:
+            KEYS.API_TOKEN = response.json()['token']
+        else:
+            error = "Unknown error while authenticating. Check your api key or your user/userkey"
+            try:
+                error = response.json()['error']
+            except:
+                pass
+            raise AuthenticationError(error)
+    return KEYS.API_TOKEN
+</code></pre>
   </div>
 </div>
 
@@ -1346,24 +1276,23 @@ Returns the API token.</p>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.updates.Updates.refresh_token', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.updates.Updates.refresh_token" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">refresh_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Refresh the current token set in the module.</span>
-<span class="sd">    Returns the new obtained valid token for the API.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_set_token_header</span><span class="p">()</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
-        <span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_complete_url</span><span class="p">(</span><span class="s1">&#39;refresh_token&#39;</span><span class="p">),</span>
-        <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_headers</span><span class="p">)</span>
-    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-    <span class="n">jsn</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-    <span class="k">if</span> <span class="s1">&#39;token&#39;</span> <span class="ow">in</span> <span class="n">jsn</span><span class="p">:</span>
-        <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">KEYS</span>
-        <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span> <span class="o">=</span> <span class="n">jsn</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span>
-    <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-</pre></div>
-
+    <pre><code>def refresh_token(self):
+    """
+    Refresh the current token set in the module.
+    Returns the new obtained valid token for the API.
+    """
+    self._set_token_header()
+    response = requests.request(
+        'GET', self._get_complete_url('refresh_token'),
+        headers=self._headers)
+    response.raise_for_status()
+    jsn = response.json()
+    if 'token' in jsn:
+        from . import KEYS
+        KEYS.API_TOKEN = jsn['token']
+        return KEYS.API_TOKEN
+    return ''
+</code></pre>
   </div>
 </div>
 
@@ -1383,18 +1312,17 @@ Returns the API token.</p>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.updates.Updates.series', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.updates.Updates.series" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">series</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get the series updated in the set time span (maximom one week from fromTime).</span>
-<span class="sd">    Returns a list of series updated in the timespan with basic info</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;query&#39;</span><span class="p">)</span>
+    <pre><code>def series(self):
+    """
+    Get the series updated in the set time span (maximom one week from fromTime).
+    Returns a list of series updated in the timespan with basic info
+    """
+    path = self._get_path('query')
     
-    <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">({</span><span class="s1">&#39;series&#39;</span><span class="p">:</span> <span class="n">response</span><span class="p">})</span>
-    <span class="k">return</span> <span class="n">response</span>
-</pre></div>
-
+    response = self._GET(path, params=self._FILTERS)
+    self._set_attrs_to_values({'series': response})
+    return response
+</code></pre>
   </div>
 </div>
 
@@ -1418,23 +1346,22 @@ in the specific language.</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.updates.Updates.update_filters', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.updates.Updates.update_filters" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">update_filters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fromTime</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">toTime</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Updates the filters for the updates class.</span>
-<span class="sd">    `fromTime` is the epoch time to start your date range to search for.</span>
-<span class="sd">    You can set `toTime` to set the epoch time to end your date range. </span>
-<span class="sd">    Must be one week from `fromTime`.</span>
-<span class="sd">    You can also set `language` with a language id to get the result </span>
-<span class="sd">    in the specific language.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">fromTime</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">[</span><span class="s1">&#39;fromTime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fromTime</span>
-    <span class="k">if</span> <span class="n">fromTime</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">[</span><span class="s1">&#39;toTime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">toTime</span>
-    <span class="k">if</span> <span class="n">language</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_language</span><span class="p">(</span><span class="n">language</span><span class="p">)</span>
-</pre></div>
-
+    <pre><code>def update_filters(self, fromTime='', toTime='', language=''):
+    """
+    Updates the filters for the updates class.
+    `fromTime` is the epoch time to start your date range to search for.
+    You can set `toTime` to set the epoch time to end your date range. 
+    Must be one week from `fromTime`.
+    You can also set `language` with a language id to get the result 
+    in the specific language.
+    """
+    if fromTime:
+        self._FILTERS['fromTime'] = fromTime
+    if fromTime:
+        self._FILTERS['toTime'] = toTime
+    if language:
+        self._set_language(language)
+</code></pre>
   </div>
 </div>
 
@@ -1454,18 +1381,17 @@ in the specific language.</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.updates.Updates.update_params', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.updates.Updates.update_params" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">update_params</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get the filters available for the updated api.</span>
-<span class="sd">    Returns a list of filters available for updates.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;update_params&#39;</span><span class="p">)</span>
+    <pre><code>def update_params(self):
+    """
+    Get the filters available for the updated api.
+    Returns a list of filters available for updates.
+    """
+    path = self._get_path('update_params')
     
-    <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">({</span><span class="s1">&#39;update_params&#39;</span><span class="p">:</span> <span class="n">response</span><span class="p">})</span>
-    <span class="k">return</span> <span class="n">response</span>
-</pre></div>
-
+    response = self._GET(path)
+    self._set_attrs_to_values({'update_params': response})
+    return response
+</code></pre>
   </div>
 </div>
 

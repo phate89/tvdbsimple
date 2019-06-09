@@ -7,7 +7,7 @@
     <meta name="description" content="This module implements the User functionality of TheTVDb API.
 Allows to retrieve, add and delete use..." />
 
-  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
   
   <style type="text/css">
   
@@ -852,73 +852,6 @@ table {
 
   </style>
 
-  <style type="text/css">
-  .codehilite .hll { background-color: #ffffcc }
-.codehilite  { background: #f8f8f8; }
-.codehilite .c { color: #408080; font-style: italic } /* Comment */
-.codehilite .err { border: 1px solid #FF0000 } /* Error */
-.codehilite .k { color: #008000; font-weight: bold } /* Keyword */
-.codehilite .o { color: #666666 } /* Operator */
-.codehilite .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.codehilite .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.codehilite .cp { color: #BC7A00 } /* Comment.Preproc */
-.codehilite .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.codehilite .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.codehilite .cs { color: #408080; font-style: italic } /* Comment.Special */
-.codehilite .gd { color: #A00000 } /* Generic.Deleted */
-.codehilite .ge { font-style: italic } /* Generic.Emph */
-.codehilite .gr { color: #FF0000 } /* Generic.Error */
-.codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.codehilite .gi { color: #00A000 } /* Generic.Inserted */
-.codehilite .go { color: #888888 } /* Generic.Output */
-.codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.codehilite .gs { font-weight: bold } /* Generic.Strong */
-.codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.codehilite .gt { color: #0044DD } /* Generic.Traceback */
-.codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.codehilite .kp { color: #008000 } /* Keyword.Pseudo */
-.codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.codehilite .kt { color: #B00040 } /* Keyword.Type */
-.codehilite .m { color: #666666 } /* Literal.Number */
-.codehilite .s { color: #BA2121 } /* Literal.String */
-.codehilite .na { color: #7D9029 } /* Name.Attribute */
-.codehilite .nb { color: #008000 } /* Name.Builtin */
-.codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.codehilite .no { color: #880000 } /* Name.Constant */
-.codehilite .nd { color: #AA22FF } /* Name.Decorator */
-.codehilite .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.codehilite .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-.codehilite .nf { color: #0000FF } /* Name.Function */
-.codehilite .nl { color: #A0A000 } /* Name.Label */
-.codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.codehilite .nv { color: #19177C } /* Name.Variable */
-.codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.codehilite .w { color: #bbbbbb } /* Text.Whitespace */
-.codehilite .mb { color: #666666 } /* Literal.Number.Bin */
-.codehilite .mf { color: #666666 } /* Literal.Number.Float */
-.codehilite .mh { color: #666666 } /* Literal.Number.Hex */
-.codehilite .mi { color: #666666 } /* Literal.Number.Integer */
-.codehilite .mo { color: #666666 } /* Literal.Number.Oct */
-.codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
-.codehilite .sc { color: #BA2121 } /* Literal.String.Char */
-.codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
-.codehilite .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-.codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.codehilite .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-.codehilite .sx { color: #008000 } /* Literal.String.Other */
-.codehilite .sr { color: #BB6688 } /* Literal.String.Regex */
-.codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
-.codehilite .ss { color: #19177C } /* Literal.String.Symbol */
-.codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.codehilite .vc { color: #19177C } /* Name.Variable.Class */
-.codehilite .vg { color: #19177C } /* Name.Variable.Global */
-.codehilite .vi { color: #19177C } /* Name.Variable.Instance */
-.codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
-  </style>
 
   <style type="text/css">
   
@@ -1095,305 +1028,302 @@ Allows to retrieve, add and delete user favorites and ratings.</p>
   
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user" class="source">
-    <div class="codehilite"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+    <pre><code># -*- coding: utf-8 -*-
 
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">This module implements the User functionality of TheTVDb API.</span>
-<span class="sd">Allows to retrieve, add and delete user favorites and ratings.</span>
+"""
+This module implements the User functionality of TheTVDb API.
+Allows to retrieve, add and delete user favorites and ratings.
 
-<span class="sd">See [Users API section](https://api.thetvdb.com/swagger#!/Users)</span>
-<span class="sd">&quot;&quot;&quot;</span>
+See [Users API section](https://api.thetvdb.com/swagger#!/Users)
+"""
 
-<span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="n">TVDB</span>
+from .base import TVDB
 
-<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">TVDB</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    User class to retrieve, add and delete user favorites and ratings.</span>
-<span class="sd">    Requires username and user-key.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_BASE_PATH</span> <span class="o">=</span> <span class="s1">&#39;user&#39;</span>
-    <span class="n">_URLS</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;info&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;favorites&#39;</span><span class="p">:</span> <span class="s1">&#39;/favorites&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;alter_favorite&#39;</span><span class="p">:</span> <span class="s1">&#39;/favorites/{id}&#39;</span>
-    <span class="p">}</span>
+class User(TVDB):
+    """
+    User class to retrieve, add and delete user favorites and ratings.
+    Requires username and user-key.
+    """
+    _BASE_PATH = 'user'
+    _URLS = {
+        'info': '',
+        'favorites': '/favorites',
+        'alter_favorite': '/favorites/{id}'
+    }
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Initialize the User class.</span>
+    def __init__(self, user, key):
+        """
+        Initialize the User class.
 
-<span class="sd">        `user` is the username for login. `key` is the userkey needed to </span>
-<span class="sd">        authenticate with the user, you can find it in the </span>
-<span class="sd">        [account info](http://thetvdb.com/?tab=userinfo) under account identifier.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">Ratings</span> <span class="o">=</span> <span class="n">User_Ratings</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Allows to retrieve, add and delete user ratings.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+        `user` is the username for login. `key` is the userkey needed to 
+        authenticate with the user, you can find it in the 
+        [account info](http://thetvdb.com/?tab=userinfo) under account identifier.
+        """
+        super(User, self).__init__(user=user, key=key)
+        self.Ratings = User_Ratings(user, key)
+        """
+        Allows to retrieve, add and delete user ratings.
+        """
 
-    <span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the basic user info and set its values to local attributes.</span>
-<span class="sd">        </span>
-<span class="sd">        Returns a dict with all the information of the user.</span>
-
-<span class="sd">        For example</span>
-
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; user = tvdb.User(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = user.info()</span>
-<span class="sd">            &gt;&gt;&gt; user.userName</span>
-<span class="sd">            &#39;username&#39;</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">)</span>
+    def info(self):
+        """
+        Get the basic user info and set its values to local attributes.
         
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">response</span>
+        Returns a dict with all the information of the user.
 
-    <span class="k">def</span> <span class="nf">favorites</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the a list of the favorite series of the user and</span>
-<span class="sd">        sets it to `favorites` attribute.</span>
-<span class="sd">        </span>
-<span class="sd">        Returns a list of the favorite series ids.</span>
+        For example
 
-<span class="sd">        For example</span>
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> user = tvdb.User('username', 'userkey')
+            >>> response = user.info()
+            >>> user.userName
+            'username'
 
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; user = tvdb.User(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = user.favorites()</span>
-<span class="sd">            &gt;&gt;&gt; user.favorites[0]</span>
-<span class="sd">            &#39;73545&#39;</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;favorites&#39;</span><span class="p">)</span>
+        """
+        path = self._get_path('info')
         
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_return</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+        response = self._GET(path)
+        self._set_attrs_to_values(response)
+        return response
 
-    <span class="k">def</span> <span class="nf">_clean_return</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">jsn</span><span class="p">):</span>
-        <span class="k">if</span> <span class="s1">&#39;favorites&#39;</span> <span class="ow">in</span> <span class="n">jsn</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">jsn</span><span class="p">[</span><span class="s1">&#39;favorites&#39;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">jsn</span>
-
-    <span class="k">def</span> <span class="nf">add_favorite</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Add a series to user favorite series from its series id.</span>
-<span class="sd">        </span>
-<span class="sd">        `id` is the series id you want to add to favorites.</span>
-
-<span class="sd">        Returns the updated list of the favorite series ids.</span>
-
-<span class="sd">        For example</span>
-
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; user = tvdb.User(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = user.add_favorite(78804)</span>
-<span class="sd">            &gt;&gt;&gt; response[-1]</span>
-<span class="sd">            &#39;78804&#39;</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;alter_favorite&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+    def favorites(self):
+        """
+        Get the a list of the favorite series of the user and
+        sets it to `favorites` attribute.
         
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_return</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_PUT</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+        Returns a list of the favorite series ids.
 
-    <span class="k">def</span> <span class="nf">delete_favorite</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Delete a series from user favorite series from its series id.</span>
-<span class="sd">        </span>
-<span class="sd">        `id` is the series id you want to delete from favorites.</span>
+        For example
 
-<span class="sd">        Returns the updated list of the favorite series ids.</span>
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> user = tvdb.User('username', 'userkey')
+            >>> response = user.favorites()
+            >>> user.favorites[0]
+            '73545'
 
-<span class="sd">        For example</span>
-
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; user = tvdb.User(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = user.delete_favorite(78804)</span>
-<span class="sd">            &gt;&gt;&gt; response[-1]</span>
-<span class="sd">            &#39;73545&#39;</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;alter_favorite&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+        """
+        path = self._get_path('favorites')
         
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_return</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_DELETE</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+        response = self._GET(path)
+        self._set_attrs_to_values(response)
+        return self._clean_return(response)
 
-<span class="k">class</span> <span class="nc">User_Ratings</span><span class="p">(</span><span class="n">TVDB</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Class needed to organize user ratings. Allows to retrieve, add and delete user ratings.</span>
+    def _clean_return(self,jsn):
+        if 'favorites' in jsn:
+            return jsn['favorites']
+        return jsn
 
-<span class="sd">    Requires username and user-key.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_BASE_PATH</span> <span class="o">=</span> <span class="s1">&#39;user/ratings&#39;</span>
-    <span class="n">_URLS</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;all&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="s1">&#39;/query&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;query_params&#39;</span><span class="p">:</span> <span class="s1">&#39;/query/params&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;add&#39;</span><span class="p">:</span> <span class="s1">&#39;/{itemType}/{itemId}/{itemRating}&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;delete&#39;</span><span class="p">:</span> <span class="s1">&#39;/{itemType}/{itemId}&#39;</span>
-    <span class="p">}</span>
-    <span class="n">_PAGES</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="n">_PAGES_LIST</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">_FILTERS</span> <span class="o">=</span> <span class="p">{}</span>
-
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Initialize the class.</span>
-
-<span class="sd">        `user` is the username for login. `key` is the userkey needed to </span>
-<span class="sd">        authenticate with the user, you can find it in the </span>
-<span class="sd">        [account info](http://thetvdb.com/?tab=userinfo) under account identifier.</span>
-<span class="sd">        It&#39;s possible to provide `itemType` that filters ratings by type. </span>
-<span class="sd">        Can be either &#39;series&#39;, &#39;episode&#39;, or &#39;banner&#39;.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">User_Ratings</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">update_filters</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">update_filters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Set the filters for the user rating.</span>
-
-<span class="sd">        It&#39;s possible to provide `itemType` that filters ratings by type. </span>
-<span class="sd">        Can be either &#39;series&#39;, &#39;episode&#39;, or &#39;banner&#39;.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span> <span class="o">=</span> <span class="n">kwargs</span>
-
-    <span class="k">def</span> <span class="nf">query_params</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the query parameters allowed for filtering and set it to `query_params` attribute.</span>
-
-<span class="sd">        Returns a list of parameters you can set to filters.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_id_path</span><span class="p">(</span><span class="s1">&#39;query_params&#39;</span><span class="p">)</span>
+    def add_favorite(self, id):
+        """
+        Add a series to user favorite series from its series id.
         
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">({</span><span class="s1">&#39;query_params&#39;</span><span class="p">:</span> <span class="n">response</span><span class="p">})</span>
-        <span class="k">return</span> <span class="n">response</span>
+        `id` is the series id you want to add to favorites.
 
-    <span class="k">def</span> <span class="nf">pages</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the number of rating pages available for filtered ratings of the specific user.</span>
+        Returns the updated list of the favorite series ids.
 
-<span class="sd">        Returns the number of rating pages available with current filters.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES</span>
+        For example
 
-    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">rating</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Add a new rating to the user&#39;s ratings..</span>
-<span class="sd">        </span>
-<span class="sd">        `type` is the item type of the item you want to rate. Can be either </span>
-<span class="sd">        &#39;series&#39;, &#39;episode&#39;, or &#39;image&#39;.</span>
-<span class="sd">        `id` is the ID of the item that you want to rate.</span>
-<span class="sd">        `rating` is the `integer` rating you want to set.</span>
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> user = tvdb.User('username', 'userkey')
+            >>> response = user.add_favorite(78804)
+            >>> response[-1]
+            '78804'
 
-<span class="sd">        Returns a list with the new updated rating.</span>
-
-<span class="sd">        For example</span>
-
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; rtn = tvdb.User_Ratings(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = rtn.add(&#39;series&#39;, 78804, 8)</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;add&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">itemType</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span> <span class="n">itemId</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span> <span class="n">itemRating</span><span class="o">=</span><span class="n">rating</span><span class="p">)</span>
+        """
+        path = self._get_path('alter_favorite').format(id=id)
         
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PUT</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        return self._clean_return(self._PUT(path))
 
-    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Delete an existing user&#39;s rating..</span>
-<span class="sd">        </span>
-<span class="sd">        `type` is the item type of the item rating you want to delete. Can be either </span>
-<span class="sd">        &#39;series&#39;, &#39;episode&#39;, or &#39;image&#39;.</span>
-<span class="sd">        `id` is the ID of the item rating that you want to delete.</span>
-
-<span class="sd">        Returns an empty dictionary.</span>
-
-<span class="sd">        For example</span>
-
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; rtn = tvdb.User_Ratings(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = rtn.delete(&#39;series&#39;, 78804)</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;delete&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">itemType</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span> <span class="n">itemId</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+    def delete_favorite(self, id):
+        """
+        Delete a series from user favorite series from its series id.
         
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_DELETE</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        `id` is the series id you want to delete from favorites.
 
-    <span class="k">def</span> <span class="nf">all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the full rating list filtered for the user and adds it</span>
-<span class="sd">        to the `ratings` attribute.</span>
-<span class="sd">        </span>
-<span class="sd">        Returns a list of ratings info.</span>
+        Returns the updated list of the favorite series ids.
 
-<span class="sd">        For example</span>
+        For example
 
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; rtn = tvdb.User_Rating(&#39;phate89&#39;, &#39;3EF7CF9BBC8BB430&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = rtn.all()</span>
-<span class="sd">            &gt;&gt;&gt; rtn.ratings[0][&#39;ratingType&#39;]</span>
-<span class="sd">            &#39;episode&#39;</span>
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> user = tvdb.User('username', 'userkey')
+            >>> response = user.delete_favorite(78804)
+            >>> response[-1]
+            '73545'
 
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">ratings</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pages</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">ratings</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        """
+        path = self._get_path('alter_favorite').format(id=id)
         
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">({</span><span class="s1">&#39;ratings&#39;</span><span class="p">:</span> <span class="n">ratings</span><span class="p">})</span>
-        <span class="k">return</span> <span class="n">ratings</span>
+        return self._clean_return(self._DELETE(path))
 
-    <span class="k">def</span> <span class="nf">page</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">page</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the rating list for a specific page for the user.</span>
-<span class="sd">        </span>
-<span class="sd">        `page` is the rating page number.</span>
+class User_Ratings(TVDB):
+    """
+    Class needed to organize user ratings. Allows to retrieve, add and delete user ratings.
 
-<span class="sd">        Returns a list ratings available in the page.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">page</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES_LIST</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES_LIST</span><span class="p">[</span><span class="n">page</span><span class="p">]</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">:</span>
-            <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;query&#39;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+    Requires username and user-key.
+    """
+    _BASE_PATH = 'user/ratings'
+    _URLS = {
+        'all': '',
+        'query': '/query',
+        'query_params': '/query/params',
+        'add': '/{itemType}/{itemId}/{itemRating}',
+        'delete': '/{itemType}/{itemId}'
+    }
+
+    def __init__(self, user, key, **kwargs):
+        """
+        Initialize the class.
+
+        `user` is the username for login. `key` is the userkey needed to 
+        authenticate with the user, you can find it in the 
+        [account info](http://thetvdb.com/?tab=userinfo) under account identifier.
+        It's possible to provide `itemType` that filters ratings by type. 
+        Can be either 'series', 'episode', or 'banner'.
+        """
+        super(User_Ratings, self).__init__(user=user, key=key)
+        self.update_filters(**kwargs)
+
+    def update_filters(self, **kwargs):
+        """
+        Set the filters for the user rating.
+
+        It's possible to provide `itemType` that filters ratings by type. 
+        Can be either 'series', 'episode', or 'banner'.
+        """
+        self._PAGES = -1
+        self._PAGES_LIST = {}
+        self._FILTERS = kwargs
+
+    def query_params(self):
+        """
+        Get the query parameters allowed for filtering and set it to `query_params` attribute.
+
+        Returns a list of parameters you can set to filters.
+        """
+        path = self._get_id_path('query_params')
         
-        <span class="n">filters</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-        <span class="n">filters</span><span class="p">[</span><span class="s1">&#39;page&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">page</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">,</span> <span class="n">cleanJson</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-        <span class="k">if</span> <span class="s1">&#39;links&#39;</span> <span class="ow">in</span> <span class="n">response</span> <span class="ow">and</span> <span class="s1">&#39;last&#39;</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;links&#39;</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;links&#39;</span><span class="p">][</span><span class="s1">&#39;last&#39;</span><span class="p">]</span>
+        response = self._GET(path)
+        self._set_attrs_to_values({'query_params': response})
+        return response
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES_LIST</span><span class="p">[</span><span class="n">page</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+    def pages(self):
+        """
+        Get the number of rating pages available for filtered ratings of the specific user.
 
-    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pages</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-            <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</pre></div>
+        Returns the number of rating pages available with current filters.
+        """
+        if self._PAGES < 0:
+            self.page(1)
+        return self._PAGES
 
+    def add(self, type, id, rating):
+        """
+        Add a new rating to the user's ratings..
+        
+        `type` is the item type of the item you want to rate. Can be either 
+        'series', 'episode', or 'image'.
+        `id` is the ID of the item that you want to rate.
+        `rating` is the `integer` rating you want to set.
+
+        Returns a list with the new updated rating.
+
+        For example
+
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> rtn = tvdb.User_Ratings('username', 'userkey')
+            >>> response = rtn.add('series', 78804, 8)
+
+        """
+        path = self._get_path('add').format(itemType=type, itemId=id, itemRating=rating)
+        
+        return self._PUT(path)
+
+    def delete(self, type, id):
+        """
+        Delete an existing user's rating..
+        
+        `type` is the item type of the item rating you want to delete. Can be either 
+        'series', 'episode', or 'image'.
+        `id` is the ID of the item rating that you want to delete.
+
+        Returns an empty dictionary.
+
+        For example
+
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> rtn = tvdb.User_Ratings('username', 'userkey')
+            >>> response = rtn.delete('series', 78804)
+
+        """
+        path = self._get_path('delete').format(itemType=type, itemId=id)
+        
+        return self._DELETE(path)
+
+    def all(self):
+        """
+        Get the full rating list filtered for the user and adds it
+        to the `ratings` attribute.
+        
+        Returns a list of ratings info.
+
+        For example
+
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> rtn = tvdb.User_Rating('phate89', '3EF7CF9BBC8BB430')
+            >>> response = rtn.all()
+            >>> rtn.ratings[0]['ratingType']
+            'episode'
+
+        """
+        ratings = []
+        for i in range (1, self.pages()+1):
+            ratings.extend(self.page(i))
+        
+        self._set_attrs_to_values({'ratings': ratings})
+        return ratings
+
+    def page(self, page):
+        """
+        Get the rating list for a specific page for the user.
+        
+        `page` is the rating page number.
+
+        Returns a list ratings available in the page.
+        """
+        if page in self._PAGES_LIST:
+            return self._PAGES_LIST[page]
+        if self._FILTERS:
+            path = self._get_path('query')
+        else:
+            path = self._get_path('all')
+        
+        filters = self._FILTERS.copy()
+        filters['page'] = page
+        response = self._GET(path, params=filters, cleanJson=False)
+        if 'links' in response and 'last' in response['links']:
+            self._PAGES = response['links']['last']
+
+        self._PAGES_LIST[page] = response['data']
+        return response['data']
+
+    def __iter__(self):
+        for i in range (1, self.pages()+1):
+            yield self.page(i)
+</code></pre>
   </div>
 
   </header>
@@ -1412,131 +1342,130 @@ Requires username and user-key.</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">TVDB</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    User class to retrieve, add and delete user favorites and ratings.</span>
-<span class="sd">    Requires username and user-key.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_BASE_PATH</span> <span class="o">=</span> <span class="s1">&#39;user&#39;</span>
-    <span class="n">_URLS</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;info&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;favorites&#39;</span><span class="p">:</span> <span class="s1">&#39;/favorites&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;alter_favorite&#39;</span><span class="p">:</span> <span class="s1">&#39;/favorites/{id}&#39;</span>
-    <span class="p">}</span>
+    <pre><code>class User(TVDB):
+    """
+    User class to retrieve, add and delete user favorites and ratings.
+    Requires username and user-key.
+    """
+    _BASE_PATH = 'user'
+    _URLS = {
+        'info': '',
+        'favorites': '/favorites',
+        'alter_favorite': '/favorites/{id}'
+    }
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Initialize the User class.</span>
+    def __init__(self, user, key):
+        """
+        Initialize the User class.
 
-<span class="sd">        `user` is the username for login. `key` is the userkey needed to </span>
-<span class="sd">        authenticate with the user, you can find it in the </span>
-<span class="sd">        [account info](http://thetvdb.com/?tab=userinfo) under account identifier.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">Ratings</span> <span class="o">=</span> <span class="n">User_Ratings</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Allows to retrieve, add and delete user ratings.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+        `user` is the username for login. `key` is the userkey needed to 
+        authenticate with the user, you can find it in the 
+        [account info](http://thetvdb.com/?tab=userinfo) under account identifier.
+        """
+        super(User, self).__init__(user=user, key=key)
+        self.Ratings = User_Ratings(user, key)
+        """
+        Allows to retrieve, add and delete user ratings.
+        """
 
-    <span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the basic user info and set its values to local attributes.</span>
-<span class="sd">        </span>
-<span class="sd">        Returns a dict with all the information of the user.</span>
-
-<span class="sd">        For example</span>
-
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; user = tvdb.User(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = user.info()</span>
-<span class="sd">            &gt;&gt;&gt; user.userName</span>
-<span class="sd">            &#39;username&#39;</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">)</span>
+    def info(self):
+        """
+        Get the basic user info and set its values to local attributes.
         
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">response</span>
+        Returns a dict with all the information of the user.
 
-    <span class="k">def</span> <span class="nf">favorites</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the a list of the favorite series of the user and</span>
-<span class="sd">        sets it to `favorites` attribute.</span>
-<span class="sd">        </span>
-<span class="sd">        Returns a list of the favorite series ids.</span>
+        For example
 
-<span class="sd">        For example</span>
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> user = tvdb.User('username', 'userkey')
+            >>> response = user.info()
+            >>> user.userName
+            'username'
 
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; user = tvdb.User(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = user.favorites()</span>
-<span class="sd">            &gt;&gt;&gt; user.favorites[0]</span>
-<span class="sd">            &#39;73545&#39;</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;favorites&#39;</span><span class="p">)</span>
+        """
+        path = self._get_path('info')
         
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_return</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+        response = self._GET(path)
+        self._set_attrs_to_values(response)
+        return response
 
-    <span class="k">def</span> <span class="nf">_clean_return</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">jsn</span><span class="p">):</span>
-        <span class="k">if</span> <span class="s1">&#39;favorites&#39;</span> <span class="ow">in</span> <span class="n">jsn</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">jsn</span><span class="p">[</span><span class="s1">&#39;favorites&#39;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">jsn</span>
-
-    <span class="k">def</span> <span class="nf">add_favorite</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Add a series to user favorite series from its series id.</span>
-<span class="sd">        </span>
-<span class="sd">        `id` is the series id you want to add to favorites.</span>
-
-<span class="sd">        Returns the updated list of the favorite series ids.</span>
-
-<span class="sd">        For example</span>
-
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; user = tvdb.User(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = user.add_favorite(78804)</span>
-<span class="sd">            &gt;&gt;&gt; response[-1]</span>
-<span class="sd">            &#39;78804&#39;</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;alter_favorite&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+    def favorites(self):
+        """
+        Get the a list of the favorite series of the user and
+        sets it to `favorites` attribute.
         
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_return</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_PUT</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+        Returns a list of the favorite series ids.
 
-    <span class="k">def</span> <span class="nf">delete_favorite</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Delete a series from user favorite series from its series id.</span>
-<span class="sd">        </span>
-<span class="sd">        `id` is the series id you want to delete from favorites.</span>
+        For example
 
-<span class="sd">        Returns the updated list of the favorite series ids.</span>
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> user = tvdb.User('username', 'userkey')
+            >>> response = user.favorites()
+            >>> user.favorites[0]
+            '73545'
 
-<span class="sd">        For example</span>
-
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; user = tvdb.User(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = user.delete_favorite(78804)</span>
-<span class="sd">            &gt;&gt;&gt; response[-1]</span>
-<span class="sd">            &#39;73545&#39;</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;alter_favorite&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+        """
+        path = self._get_path('favorites')
         
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_return</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_DELETE</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
-</pre></div>
+        response = self._GET(path)
+        self._set_attrs_to_values(response)
+        return self._clean_return(response)
 
+    def _clean_return(self,jsn):
+        if 'favorites' in jsn:
+            return jsn['favorites']
+        return jsn
+
+    def add_favorite(self, id):
+        """
+        Add a series to user favorite series from its series id.
+        
+        `id` is the series id you want to add to favorites.
+
+        Returns the updated list of the favorite series ids.
+
+        For example
+
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> user = tvdb.User('username', 'userkey')
+            >>> response = user.add_favorite(78804)
+            >>> response[-1]
+            '78804'
+
+        """
+        path = self._get_path('alter_favorite').format(id=id)
+        
+        return self._clean_return(self._PUT(path))
+
+    def delete_favorite(self, id):
+        """
+        Delete a series from user favorite series from its series id.
+        
+        `id` is the series id you want to delete from favorites.
+
+        Returns the updated list of the favorite series ids.
+
+        For example
+
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> user = tvdb.User('username', 'userkey')
+            >>> response = user.delete_favorite(78804)
+            >>> response[-1]
+            '73545'
+
+        """
+        path = self._get_path('alter_favorite').format(id=id)
+        
+        return self._clean_return(self._DELETE(path))
+</code></pre>
   </div>
 </div>
 
@@ -1546,21 +1475,9 @@ Requires username and user-key.</p></div>
           <ul class="class_list">
           <li><a href="#tvdbsimple.user.User">User</a></li>
           <li>tvdbsimple.base.TVDB</li>
-          <li>__builtin__.object</li>
+          <li>builtins.object</li>
           </ul>
-          <h3>Instance variables</h3>
-            <div class="item">
-            <p id="tvdbsimple.user.User.Ratings" class="name">var <span class="ident">Ratings</span></p>
-            
-
-            
-  
-    <div class="desc"><p>Allows to retrieve, add and delete user ratings.</p></div>
-  <div class="source_cont">
-</div>
-
-            </div>
-          <h3>Methods</h3>
+          <h3>Static methods</h3>
             
   <div class="item">
     <div class="name def" id="tvdbsimple.user.User.__init__">
@@ -1577,20 +1494,19 @@ authenticate with the user, you can find it in the
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User.__init__', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User.__init__" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Initialize the User class.</span>
-<span class="sd">    `user` is the username for login. `key` is the userkey needed to </span>
-<span class="sd">    authenticate with the user, you can find it in the </span>
-<span class="sd">    [account info](http://thetvdb.com/?tab=userinfo) under account identifier.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">super</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">Ratings</span> <span class="o">=</span> <span class="n">User_Ratings</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Allows to retrieve, add and delete user ratings.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-</pre></div>
-
+    <pre><code>def __init__(self, user, key):
+    """
+    Initialize the User class.
+    `user` is the username for login. `key` is the userkey needed to 
+    authenticate with the user, you can find it in the 
+    [account info](http://thetvdb.com/?tab=userinfo) under account identifier.
+    """
+    super(User, self).__init__(user=user, key=key)
+    self.Ratings = User_Ratings(user, key)
+    """
+    Allows to retrieve, add and delete user ratings.
+    """
+</code></pre>
   </div>
 </div>
 
@@ -1609,36 +1525,36 @@ authenticate with the user, you can find it in the
 <p><code>id</code> is the series id you want to add to favorites.</p>
 <p>Returns the updated list of the favorite series ids.</p>
 <p>For example</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">tvdbsimple</span> <span class="kn">as</span> <span class="nn">tvdb</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">user</span> <span class="o">=</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;userkey&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">add_favorite</span><span class="p">(</span><span class="mi">78804</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">response</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="s1">&#39;78804&#39;</span>
-</pre></div></div>
+<pre><code>#!python
+&gt;&gt;&gt; import tvdbsimple as tvdb
+&gt;&gt;&gt; tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+&gt;&gt;&gt; user = tvdb.User('username', 'userkey')
+&gt;&gt;&gt; response = user.add_favorite(78804)
+&gt;&gt;&gt; response[-1]
+'78804'
+</code></pre></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User.add_favorite', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User.add_favorite" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">add_favorite</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Add a series to user favorite series from its series id.</span>
-<span class="sd">    </span>
-<span class="sd">    `id` is the series id you want to add to favorites.</span>
-<span class="sd">    Returns the updated list of the favorite series ids.</span>
-<span class="sd">    For example</span>
-<span class="sd">        #!python</span>
-<span class="sd">        &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">        &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">        &gt;&gt;&gt; user = tvdb.User(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">        &gt;&gt;&gt; response = user.add_favorite(78804)</span>
-<span class="sd">        &gt;&gt;&gt; response[-1]</span>
-<span class="sd">        &#39;78804&#39;</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;alter_favorite&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+    <pre><code>def add_favorite(self, id):
+    """
+    Add a series to user favorite series from its series id.
     
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_return</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_PUT</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
-</pre></div>
-
+    `id` is the series id you want to add to favorites.
+    Returns the updated list of the favorite series ids.
+    For example
+        #!python
+        >>> import tvdbsimple as tvdb
+        >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+        >>> user = tvdb.User('username', 'userkey')
+        >>> response = user.add_favorite(78804)
+        >>> response[-1]
+        '78804'
+    """
+    path = self._get_path('alter_favorite').format(id=id)
+    
+    return self._clean_return(self._PUT(path))
+</code></pre>
   </div>
 </div>
 
@@ -1657,36 +1573,36 @@ authenticate with the user, you can find it in the
 <p><code>id</code> is the series id you want to delete from favorites.</p>
 <p>Returns the updated list of the favorite series ids.</p>
 <p>For example</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">tvdbsimple</span> <span class="kn">as</span> <span class="nn">tvdb</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">user</span> <span class="o">=</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;userkey&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">delete_favorite</span><span class="p">(</span><span class="mi">78804</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">response</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="s1">&#39;73545&#39;</span>
-</pre></div></div>
+<pre><code>#!python
+&gt;&gt;&gt; import tvdbsimple as tvdb
+&gt;&gt;&gt; tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+&gt;&gt;&gt; user = tvdb.User('username', 'userkey')
+&gt;&gt;&gt; response = user.delete_favorite(78804)
+&gt;&gt;&gt; response[-1]
+'73545'
+</code></pre></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User.delete_favorite', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User.delete_favorite" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">delete_favorite</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Delete a series from user favorite series from its series id.</span>
-<span class="sd">    </span>
-<span class="sd">    `id` is the series id you want to delete from favorites.</span>
-<span class="sd">    Returns the updated list of the favorite series ids.</span>
-<span class="sd">    For example</span>
-<span class="sd">        #!python</span>
-<span class="sd">        &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">        &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">        &gt;&gt;&gt; user = tvdb.User(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">        &gt;&gt;&gt; response = user.delete_favorite(78804)</span>
-<span class="sd">        &gt;&gt;&gt; response[-1]</span>
-<span class="sd">        &#39;73545&#39;</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;alter_favorite&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+    <pre><code>def delete_favorite(self, id):
+    """
+    Delete a series from user favorite series from its series id.
     
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_return</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_DELETE</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
-</pre></div>
-
+    `id` is the series id you want to delete from favorites.
+    Returns the updated list of the favorite series ids.
+    For example
+        #!python
+        >>> import tvdbsimple as tvdb
+        >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+        >>> user = tvdb.User('username', 'userkey')
+        >>> response = user.delete_favorite(78804)
+        >>> response[-1]
+        '73545'
+    """
+    path = self._get_path('alter_favorite').format(id=id)
+    
+    return self._clean_return(self._DELETE(path))
+</code></pre>
   </div>
 </div>
 
@@ -1705,38 +1621,38 @@ authenticate with the user, you can find it in the
 sets it to <code>favorites</code> attribute.</p>
 <p>Returns a list of the favorite series ids.</p>
 <p>For example</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">tvdbsimple</span> <span class="kn">as</span> <span class="nn">tvdb</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">user</span> <span class="o">=</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;userkey&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">favorites</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">user</span><span class="o">.</span><span class="n">favorites</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="s1">&#39;73545&#39;</span>
-</pre></div></div>
+<pre><code>#!python
+&gt;&gt;&gt; import tvdbsimple as tvdb
+&gt;&gt;&gt; tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+&gt;&gt;&gt; user = tvdb.User('username', 'userkey')
+&gt;&gt;&gt; response = user.favorites()
+&gt;&gt;&gt; user.favorites[0]
+'73545'
+</code></pre></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User.favorites', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User.favorites" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">favorites</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get the a list of the favorite series of the user and</span>
-<span class="sd">    sets it to `favorites` attribute.</span>
-<span class="sd">    </span>
-<span class="sd">    Returns a list of the favorite series ids.</span>
-<span class="sd">    For example</span>
-<span class="sd">        #!python</span>
-<span class="sd">        &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">        &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">        &gt;&gt;&gt; user = tvdb.User(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">        &gt;&gt;&gt; response = user.favorites()</span>
-<span class="sd">        &gt;&gt;&gt; user.favorites[0]</span>
-<span class="sd">        &#39;73545&#39;</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;favorites&#39;</span><span class="p">)</span>
+    <pre><code>def favorites(self):
+    """
+    Get the a list of the favorite series of the user and
+    sets it to `favorites` attribute.
     
-    <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_return</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-</pre></div>
-
+    Returns a list of the favorite series ids.
+    For example
+        #!python
+        >>> import tvdbsimple as tvdb
+        >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+        >>> user = tvdb.User('username', 'userkey')
+        >>> response = user.favorites()
+        >>> user.favorites[0]
+        '73545'
+    """
+    path = self._get_path('favorites')
+    
+    response = self._GET(path)
+    self._set_attrs_to_values(response)
+    return self._clean_return(response)
+</code></pre>
   </div>
 </div>
 
@@ -1757,36 +1673,35 @@ Returns the API token.</p>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User.get_token', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User.get_token" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">get_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">forceNew</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get the existing token or creates it if it doesn&#39;t exist.</span>
-<span class="sd">    Returns the API token.</span>
-<span class="sd">    If `forceNew` is true  the function will do a new login to retrieve the token.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">KEYS</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span> <span class="ow">or</span> <span class="n">forceNew</span><span class="p">:</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">APIKeyError</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">&quot;USER&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">&quot;USER_KEY&quot;</span><span class="p">):</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;apikey&quot;</span><span class="p">:</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">,</span> <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER</span><span class="p">,</span> <span class="s2">&quot;userkey&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span><span class="p">}</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;apikey&quot;</span><span class="p">:</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">}</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
-                <span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_complete_url</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">),</span> 
-                <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> 
-                <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_headers</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
-            <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">error</span> <span class="o">=</span> <span class="s2">&quot;Unknown error while authenticating. Check your api key or your user/userkey&quot;</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">error</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span>
-            <span class="k">except</span><span class="p">:</span>
-                <span class="k">pass</span>
-            <span class="k">raise</span> <span class="n">AuthenticationError</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span>
-</pre></div>
-
+    <pre><code>def get_token(self, forceNew=False):
+    """
+    Get the existing token or creates it if it doesn't exist.
+    Returns the API token.
+    If `forceNew` is true  the function will do a new login to retrieve the token.
+    """
+    from . import KEYS
+    if not KEYS.API_TOKEN or forceNew:
+        if not KEYS.API_KEY:
+            raise APIKeyError
+        if hasattr(self,"USER") and hasattr(self,"USER_KEY"):
+            data = {"apikey": KEYS.API_KEY, "username": self.USER, "userkey": self.USER_KEY}
+        else:
+            data={"apikey": KEYS.API_KEY}
+        response = requests.request(
+                'POST', self._get_complete_url('login'), 
+                data=json.dumps(data), 
+                headers=self._headers)
+        if response.status_code == 200:
+            KEYS.API_TOKEN = response.json()['token']
+        else:
+            error = "Unknown error while authenticating. Check your api key or your user/userkey"
+            try:
+                error = response.json()['error']
+            except:
+                pass
+            raise AuthenticationError(error)
+    return KEYS.API_TOKEN
+</code></pre>
   </div>
 </div>
 
@@ -1804,37 +1719,37 @@ Returns the API token.</p>
     <div class="desc"><p>Get the basic user info and set its values to local attributes.</p>
 <p>Returns a dict with all the information of the user.</p>
 <p>For example</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">tvdbsimple</span> <span class="kn">as</span> <span class="nn">tvdb</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">user</span> <span class="o">=</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;userkey&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">user</span><span class="o">.</span><span class="n">userName</span>
-<span class="s1">&#39;username&#39;</span>
-</pre></div></div>
+<pre><code>#!python
+&gt;&gt;&gt; import tvdbsimple as tvdb
+&gt;&gt;&gt; tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+&gt;&gt;&gt; user = tvdb.User('username', 'userkey')
+&gt;&gt;&gt; response = user.info()
+&gt;&gt;&gt; user.userName
+'username'
+</code></pre></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User.info', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User.info" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get the basic user info and set its values to local attributes.</span>
-<span class="sd">    </span>
-<span class="sd">    Returns a dict with all the information of the user.</span>
-<span class="sd">    For example</span>
-<span class="sd">        #!python</span>
-<span class="sd">        &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">        &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">        &gt;&gt;&gt; user = tvdb.User(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">        &gt;&gt;&gt; response = user.info()</span>
-<span class="sd">        &gt;&gt;&gt; user.userName</span>
-<span class="sd">        &#39;username&#39;</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">)</span>
+    <pre><code>def info(self):
+    """
+    Get the basic user info and set its values to local attributes.
     
-    <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">response</span>
-</pre></div>
-
+    Returns a dict with all the information of the user.
+    For example
+        #!python
+        >>> import tvdbsimple as tvdb
+        >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+        >>> user = tvdb.User('username', 'userkey')
+        >>> response = user.info()
+        >>> user.userName
+        'username'
+    """
+    path = self._get_path('info')
+    
+    response = self._GET(path)
+    self._set_attrs_to_values(response)
+    return response
+</code></pre>
   </div>
 </div>
 
@@ -1854,29 +1769,40 @@ Returns the API token.</p>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User.refresh_token', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User.refresh_token" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">refresh_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Refresh the current token set in the module.</span>
-<span class="sd">    Returns the new obtained valid token for the API.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_set_token_header</span><span class="p">()</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
-        <span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_complete_url</span><span class="p">(</span><span class="s1">&#39;refresh_token&#39;</span><span class="p">),</span>
-        <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_headers</span><span class="p">)</span>
-    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-    <span class="n">jsn</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-    <span class="k">if</span> <span class="s1">&#39;token&#39;</span> <span class="ow">in</span> <span class="n">jsn</span><span class="p">:</span>
-        <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">KEYS</span>
-        <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span> <span class="o">=</span> <span class="n">jsn</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span>
-    <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-</pre></div>
-
+    <pre><code>def refresh_token(self):
+    """
+    Refresh the current token set in the module.
+    Returns the new obtained valid token for the API.
+    """
+    self._set_token_header()
+    response = requests.request(
+        'GET', self._get_complete_url('refresh_token'),
+        headers=self._headers)
+    response.raise_for_status()
+    jsn = response.json()
+    if 'token' in jsn:
+        from . import KEYS
+        KEYS.API_TOKEN = jsn['token']
+        return KEYS.API_TOKEN
+    return ''
+</code></pre>
   </div>
 </div>
 
   </div>
   
+          <h3>Instance variables</h3>
+            <div class="item">
+            <p id="tvdbsimple.user.User.Ratings" class="name">var <span class="ident">Ratings</span></p>
+            
+
+            
+  
+    <div class="desc"><p>Allows to retrieve, add and delete user ratings.</p></div>
+  <div class="source_cont">
+</div>
+
+            </div>
       </div>
       </div>
       
@@ -1889,170 +1815,167 @@ Returns the API token.</p>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User_Ratings', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User_Ratings" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">User_Ratings</span><span class="p">(</span><span class="n">TVDB</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Class needed to organize user ratings. Allows to retrieve, add and delete user ratings.</span>
+    <pre><code>class User_Ratings(TVDB):
+    """
+    Class needed to organize user ratings. Allows to retrieve, add and delete user ratings.
 
-<span class="sd">    Requires username and user-key.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_BASE_PATH</span> <span class="o">=</span> <span class="s1">&#39;user/ratings&#39;</span>
-    <span class="n">_URLS</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;all&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="s1">&#39;/query&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;query_params&#39;</span><span class="p">:</span> <span class="s1">&#39;/query/params&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;add&#39;</span><span class="p">:</span> <span class="s1">&#39;/{itemType}/{itemId}/{itemRating}&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;delete&#39;</span><span class="p">:</span> <span class="s1">&#39;/{itemType}/{itemId}&#39;</span>
-    <span class="p">}</span>
-    <span class="n">_PAGES</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="n">_PAGES_LIST</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">_FILTERS</span> <span class="o">=</span> <span class="p">{}</span>
+    Requires username and user-key.
+    """
+    _BASE_PATH = 'user/ratings'
+    _URLS = {
+        'all': '',
+        'query': '/query',
+        'query_params': '/query/params',
+        'add': '/{itemType}/{itemId}/{itemRating}',
+        'delete': '/{itemType}/{itemId}'
+    }
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Initialize the class.</span>
+    def __init__(self, user, key, **kwargs):
+        """
+        Initialize the class.
 
-<span class="sd">        `user` is the username for login. `key` is the userkey needed to </span>
-<span class="sd">        authenticate with the user, you can find it in the </span>
-<span class="sd">        [account info](http://thetvdb.com/?tab=userinfo) under account identifier.</span>
-<span class="sd">        It&#39;s possible to provide `itemType` that filters ratings by type. </span>
-<span class="sd">        Can be either &#39;series&#39;, &#39;episode&#39;, or &#39;banner&#39;.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">User_Ratings</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">update_filters</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        `user` is the username for login. `key` is the userkey needed to 
+        authenticate with the user, you can find it in the 
+        [account info](http://thetvdb.com/?tab=userinfo) under account identifier.
+        It's possible to provide `itemType` that filters ratings by type. 
+        Can be either 'series', 'episode', or 'banner'.
+        """
+        super(User_Ratings, self).__init__(user=user, key=key)
+        self.update_filters(**kwargs)
 
-    <span class="k">def</span> <span class="nf">update_filters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Set the filters for the user rating.</span>
+    def update_filters(self, **kwargs):
+        """
+        Set the filters for the user rating.
 
-<span class="sd">        It&#39;s possible to provide `itemType` that filters ratings by type. </span>
-<span class="sd">        Can be either &#39;series&#39;, &#39;episode&#39;, or &#39;banner&#39;.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span> <span class="o">=</span> <span class="n">kwargs</span>
+        It's possible to provide `itemType` that filters ratings by type. 
+        Can be either 'series', 'episode', or 'banner'.
+        """
+        self._PAGES = -1
+        self._PAGES_LIST = {}
+        self._FILTERS = kwargs
 
-    <span class="k">def</span> <span class="nf">query_params</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the query parameters allowed for filtering and set it to `query_params` attribute.</span>
+    def query_params(self):
+        """
+        Get the query parameters allowed for filtering and set it to `query_params` attribute.
 
-<span class="sd">        Returns a list of parameters you can set to filters.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_id_path</span><span class="p">(</span><span class="s1">&#39;query_params&#39;</span><span class="p">)</span>
+        Returns a list of parameters you can set to filters.
+        """
+        path = self._get_id_path('query_params')
         
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">({</span><span class="s1">&#39;query_params&#39;</span><span class="p">:</span> <span class="n">response</span><span class="p">})</span>
-        <span class="k">return</span> <span class="n">response</span>
+        response = self._GET(path)
+        self._set_attrs_to_values({'query_params': response})
+        return response
 
-    <span class="k">def</span> <span class="nf">pages</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the number of rating pages available for filtered ratings of the specific user.</span>
+    def pages(self):
+        """
+        Get the number of rating pages available for filtered ratings of the specific user.
 
-<span class="sd">        Returns the number of rating pages available with current filters.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES</span>
+        Returns the number of rating pages available with current filters.
+        """
+        if self._PAGES < 0:
+            self.page(1)
+        return self._PAGES
 
-    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">rating</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Add a new rating to the user&#39;s ratings..</span>
-<span class="sd">        </span>
-<span class="sd">        `type` is the item type of the item you want to rate. Can be either </span>
-<span class="sd">        &#39;series&#39;, &#39;episode&#39;, or &#39;image&#39;.</span>
-<span class="sd">        `id` is the ID of the item that you want to rate.</span>
-<span class="sd">        `rating` is the `integer` rating you want to set.</span>
-
-<span class="sd">        Returns a list with the new updated rating.</span>
-
-<span class="sd">        For example</span>
-
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; rtn = tvdb.User_Ratings(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = rtn.add(&#39;series&#39;, 78804, 8)</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;add&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">itemType</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span> <span class="n">itemId</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span> <span class="n">itemRating</span><span class="o">=</span><span class="n">rating</span><span class="p">)</span>
+    def add(self, type, id, rating):
+        """
+        Add a new rating to the user's ratings..
         
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PUT</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        `type` is the item type of the item you want to rate. Can be either 
+        'series', 'episode', or 'image'.
+        `id` is the ID of the item that you want to rate.
+        `rating` is the `integer` rating you want to set.
 
-    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Delete an existing user&#39;s rating..</span>
-<span class="sd">        </span>
-<span class="sd">        `type` is the item type of the item rating you want to delete. Can be either </span>
-<span class="sd">        &#39;series&#39;, &#39;episode&#39;, or &#39;image&#39;.</span>
-<span class="sd">        `id` is the ID of the item rating that you want to delete.</span>
+        Returns a list with the new updated rating.
 
-<span class="sd">        Returns an empty dictionary.</span>
+        For example
 
-<span class="sd">        For example</span>
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> rtn = tvdb.User_Ratings('username', 'userkey')
+            >>> response = rtn.add('series', 78804, 8)
 
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; rtn = tvdb.User_Ratings(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = rtn.delete(&#39;series&#39;, 78804)</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;delete&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">itemType</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span> <span class="n">itemId</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+        """
+        path = self._get_path('add').format(itemType=type, itemId=id, itemRating=rating)
         
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_DELETE</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        return self._PUT(path)
 
-    <span class="k">def</span> <span class="nf">all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the full rating list filtered for the user and adds it</span>
-<span class="sd">        to the `ratings` attribute.</span>
-<span class="sd">        </span>
-<span class="sd">        Returns a list of ratings info.</span>
-
-<span class="sd">        For example</span>
-
-<span class="sd">            #!python</span>
-<span class="sd">            &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">            &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">            &gt;&gt;&gt; rtn = tvdb.User_Rating(&#39;phate89&#39;, &#39;3EF7CF9BBC8BB430&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; response = rtn.all()</span>
-<span class="sd">            &gt;&gt;&gt; rtn.ratings[0][&#39;ratingType&#39;]</span>
-<span class="sd">            &#39;episode&#39;</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">ratings</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pages</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">ratings</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    def delete(self, type, id):
+        """
+        Delete an existing user's rating..
         
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">({</span><span class="s1">&#39;ratings&#39;</span><span class="p">:</span> <span class="n">ratings</span><span class="p">})</span>
-        <span class="k">return</span> <span class="n">ratings</span>
+        `type` is the item type of the item rating you want to delete. Can be either 
+        'series', 'episode', or 'image'.
+        `id` is the ID of the item rating that you want to delete.
 
-    <span class="k">def</span> <span class="nf">page</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">page</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get the rating list for a specific page for the user.</span>
-<span class="sd">        </span>
-<span class="sd">        `page` is the rating page number.</span>
+        Returns an empty dictionary.
 
-<span class="sd">        Returns a list ratings available in the page.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">page</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES_LIST</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES_LIST</span><span class="p">[</span><span class="n">page</span><span class="p">]</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">:</span>
-            <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;query&#39;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+        For example
+
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> rtn = tvdb.User_Ratings('username', 'userkey')
+            >>> response = rtn.delete('series', 78804)
+
+        """
+        path = self._get_path('delete').format(itemType=type, itemId=id)
         
-        <span class="n">filters</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-        <span class="n">filters</span><span class="p">[</span><span class="s1">&#39;page&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">page</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">,</span> <span class="n">cleanJson</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-        <span class="k">if</span> <span class="s1">&#39;links&#39;</span> <span class="ow">in</span> <span class="n">response</span> <span class="ow">and</span> <span class="s1">&#39;last&#39;</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;links&#39;</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;links&#39;</span><span class="p">][</span><span class="s1">&#39;last&#39;</span><span class="p">]</span>
+        return self._DELETE(path)
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES_LIST</span><span class="p">[</span><span class="n">page</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+    def all(self):
+        """
+        Get the full rating list filtered for the user and adds it
+        to the `ratings` attribute.
+        
+        Returns a list of ratings info.
 
-    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pages</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-            <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</pre></div>
+        For example
 
+            #!python
+            >>> import tvdbsimple as tvdb
+            >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+            >>> rtn = tvdb.User_Rating('phate89', '3EF7CF9BBC8BB430')
+            >>> response = rtn.all()
+            >>> rtn.ratings[0]['ratingType']
+            'episode'
+
+        """
+        ratings = []
+        for i in range (1, self.pages()+1):
+            ratings.extend(self.page(i))
+        
+        self._set_attrs_to_values({'ratings': ratings})
+        return ratings
+
+    def page(self, page):
+        """
+        Get the rating list for a specific page for the user.
+        
+        `page` is the rating page number.
+
+        Returns a list ratings available in the page.
+        """
+        if page in self._PAGES_LIST:
+            return self._PAGES_LIST[page]
+        if self._FILTERS:
+            path = self._get_path('query')
+        else:
+            path = self._get_path('all')
+        
+        filters = self._FILTERS.copy()
+        filters['page'] = page
+        response = self._GET(path, params=filters, cleanJson=False)
+        if 'links' in response and 'last' in response['links']:
+            self._PAGES = response['links']['last']
+
+        self._PAGES_LIST[page] = response['data']
+        return response['data']
+
+    def __iter__(self):
+        for i in range (1, self.pages()+1):
+            yield self.page(i)
+</code></pre>
   </div>
 </div>
 
@@ -2062,9 +1985,9 @@ Returns the API token.</p>
           <ul class="class_list">
           <li><a href="#tvdbsimple.user.User_Ratings">User_Ratings</a></li>
           <li>tvdbsimple.base.TVDB</li>
-          <li>__builtin__.object</li>
+          <li>builtins.object</li>
           </ul>
-          <h3>Methods</h3>
+          <h3>Static methods</h3>
             
   <div class="item">
     <div class="name def" id="tvdbsimple.user.User_Ratings.__init__">
@@ -2083,20 +2006,18 @@ Can be either 'series', 'episode', or 'banner'.</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User_Ratings.__init__', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User_Ratings.__init__" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Initialize the class.</span>
-<span class="sd">    `user` is the username for login. `key` is the userkey needed to </span>
-<span class="sd">    authenticate with the user, you can find it in the </span>
-<span class="sd">    [account info](http://thetvdb.com/?tab=userinfo) under account identifier.</span>
-<span class="sd">    It&#39;s possible to provide `itemType` that filters ratings by type. </span>
-<span class="sd">    Can be either &#39;series&#39;, &#39;episode&#39;, or &#39;banner&#39;.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">super</span><span class="p">(</span><span class="n">User_Ratings</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">update_filters</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</pre></div>
-
+    <pre><code>def __init__(self, user, key, **kwargs):
+    """
+    Initialize the class.
+    `user` is the username for login. `key` is the userkey needed to 
+    authenticate with the user, you can find it in the 
+    [account info](http://thetvdb.com/?tab=userinfo) under account identifier.
+    It's possible to provide `itemType` that filters ratings by type. 
+    Can be either 'series', 'episode', or 'banner'.
+    """
+    super(User_Ratings, self).__init__(user=user, key=key)
+    self.update_filters(**kwargs)
+</code></pre>
   </div>
 </div>
 
@@ -2118,35 +2039,35 @@ Can be either 'series', 'episode', or 'banner'.</p></div>
 <code>rating</code> is the <code>integer</code> rating you want to set.</p>
 <p>Returns a list with the new updated rating.</p>
 <p>For example</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">tvdbsimple</span> <span class="kn">as</span> <span class="nn">tvdb</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">rtn</span> <span class="o">=</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">User_Ratings</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;userkey&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">rtn</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;series&#39;</span><span class="p">,</span> <span class="mi">78804</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-</pre></div></div>
+<pre><code>#!python
+&gt;&gt;&gt; import tvdbsimple as tvdb
+&gt;&gt;&gt; tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+&gt;&gt;&gt; rtn = tvdb.User_Ratings('username', 'userkey')
+&gt;&gt;&gt; response = rtn.add('series', 78804, 8)
+</code></pre></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User_Ratings.add', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User_Ratings.add" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">rating</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Add a new rating to the user&#39;s ratings..</span>
-<span class="sd">    </span>
-<span class="sd">    `type` is the item type of the item you want to rate. Can be either </span>
-<span class="sd">    &#39;series&#39;, &#39;episode&#39;, or &#39;image&#39;.</span>
-<span class="sd">    `id` is the ID of the item that you want to rate.</span>
-<span class="sd">    `rating` is the `integer` rating you want to set.</span>
-<span class="sd">    Returns a list with the new updated rating.</span>
-<span class="sd">    For example</span>
-<span class="sd">        #!python</span>
-<span class="sd">        &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">        &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">        &gt;&gt;&gt; rtn = tvdb.User_Ratings(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">        &gt;&gt;&gt; response = rtn.add(&#39;series&#39;, 78804, 8)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;add&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">itemType</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span> <span class="n">itemId</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span> <span class="n">itemRating</span><span class="o">=</span><span class="n">rating</span><span class="p">)</span>
+    <pre><code>def add(self, type, id, rating):
+    """
+    Add a new rating to the user's ratings..
     
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PUT</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-</pre></div>
-
+    `type` is the item type of the item you want to rate. Can be either 
+    'series', 'episode', or 'image'.
+    `id` is the ID of the item that you want to rate.
+    `rating` is the `integer` rating you want to set.
+    Returns a list with the new updated rating.
+    For example
+        #!python
+        >>> import tvdbsimple as tvdb
+        >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+        >>> rtn = tvdb.User_Ratings('username', 'userkey')
+        >>> response = rtn.add('series', 78804, 8)
+    """
+    path = self._get_path('add').format(itemType=type, itemId=id, itemRating=rating)
+    
+    return self._PUT(path)
+</code></pre>
   </div>
 </div>
 
@@ -2165,39 +2086,39 @@ Can be either 'series', 'episode', or 'banner'.</p></div>
 to the <code>ratings</code> attribute.</p>
 <p>Returns a list of ratings info.</p>
 <p>For example</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">tvdbsimple</span> <span class="kn">as</span> <span class="nn">tvdb</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">rtn</span> <span class="o">=</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">User_Rating</span><span class="p">(</span><span class="s1">&#39;phate89&#39;</span><span class="p">,</span> <span class="s1">&#39;3EF7CF9BBC8BB430&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">rtn</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">rtn</span><span class="o">.</span><span class="n">ratings</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;ratingType&#39;</span><span class="p">]</span>
-<span class="s1">&#39;episode&#39;</span>
-</pre></div></div>
+<pre><code>#!python
+&gt;&gt;&gt; import tvdbsimple as tvdb
+&gt;&gt;&gt; tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+&gt;&gt;&gt; rtn = tvdb.User_Rating('phate89', '3EF7CF9BBC8BB430')
+&gt;&gt;&gt; response = rtn.all()
+&gt;&gt;&gt; rtn.ratings[0]['ratingType']
+'episode'
+</code></pre></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User_Ratings.all', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User_Ratings.all" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get the full rating list filtered for the user and adds it</span>
-<span class="sd">    to the `ratings` attribute.</span>
-<span class="sd">    </span>
-<span class="sd">    Returns a list of ratings info.</span>
-<span class="sd">    For example</span>
-<span class="sd">        #!python</span>
-<span class="sd">        &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">        &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">        &gt;&gt;&gt; rtn = tvdb.User_Rating(&#39;phate89&#39;, &#39;3EF7CF9BBC8BB430&#39;)</span>
-<span class="sd">        &gt;&gt;&gt; response = rtn.all()</span>
-<span class="sd">        &gt;&gt;&gt; rtn.ratings[0][&#39;ratingType&#39;]</span>
-<span class="sd">        &#39;episode&#39;</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">ratings</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pages</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">ratings</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <pre><code>def all(self):
+    """
+    Get the full rating list filtered for the user and adds it
+    to the `ratings` attribute.
     
-    <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">({</span><span class="s1">&#39;ratings&#39;</span><span class="p">:</span> <span class="n">ratings</span><span class="p">})</span>
-    <span class="k">return</span> <span class="n">ratings</span>
-</pre></div>
-
+    Returns a list of ratings info.
+    For example
+        #!python
+        >>> import tvdbsimple as tvdb
+        >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+        >>> rtn = tvdb.User_Rating('phate89', '3EF7CF9BBC8BB430')
+        >>> response = rtn.all()
+        >>> rtn.ratings[0]['ratingType']
+        'episode'
+    """
+    ratings = []
+    for i in range (1, self.pages()+1):
+        ratings.extend(self.page(i))
+    
+    self._set_attrs_to_values({'ratings': ratings})
+    return ratings
+</code></pre>
   </div>
 </div>
 
@@ -2218,34 +2139,34 @@ to the <code>ratings</code> attribute.</p>
 <code>id</code> is the ID of the item rating that you want to delete.</p>
 <p>Returns an empty dictionary.</p>
 <p>For example</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">tvdbsimple</span> <span class="kn">as</span> <span class="nn">tvdb</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span> <span class="o">=</span> <span class="s1">&#39;YOUR_API_KEY&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">rtn</span> <span class="o">=</span> <span class="n">tvdb</span><span class="o">.</span><span class="n">User_Ratings</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;userkey&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">rtn</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;series&#39;</span><span class="p">,</span> <span class="mi">78804</span><span class="p">)</span>
-</pre></div></div>
+<pre><code>#!python
+&gt;&gt;&gt; import tvdbsimple as tvdb
+&gt;&gt;&gt; tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+&gt;&gt;&gt; rtn = tvdb.User_Ratings('username', 'userkey')
+&gt;&gt;&gt; response = rtn.delete('series', 78804)
+</code></pre></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User_Ratings.delete', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User_Ratings.delete" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Delete an existing user&#39;s rating..</span>
-<span class="sd">    </span>
-<span class="sd">    `type` is the item type of the item rating you want to delete. Can be either </span>
-<span class="sd">    &#39;series&#39;, &#39;episode&#39;, or &#39;image&#39;.</span>
-<span class="sd">    `id` is the ID of the item rating that you want to delete.</span>
-<span class="sd">    Returns an empty dictionary.</span>
-<span class="sd">    For example</span>
-<span class="sd">        #!python</span>
-<span class="sd">        &gt;&gt;&gt; import tvdbsimple as tvdb</span>
-<span class="sd">        &gt;&gt;&gt; tvdb.KEYS.API_KEY = &#39;YOUR_API_KEY&#39;</span>
-<span class="sd">        &gt;&gt;&gt; rtn = tvdb.User_Ratings(&#39;username&#39;, &#39;userkey&#39;)</span>
-<span class="sd">        &gt;&gt;&gt; response = rtn.delete(&#39;series&#39;, 78804)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;delete&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">itemType</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span> <span class="n">itemId</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+    <pre><code>def delete(self, type, id):
+    """
+    Delete an existing user's rating..
     
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_DELETE</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-</pre></div>
-
+    `type` is the item type of the item rating you want to delete. Can be either 
+    'series', 'episode', or 'image'.
+    `id` is the ID of the item rating that you want to delete.
+    Returns an empty dictionary.
+    For example
+        #!python
+        >>> import tvdbsimple as tvdb
+        >>> tvdb.KEYS.API_KEY = 'YOUR_API_KEY'
+        >>> rtn = tvdb.User_Ratings('username', 'userkey')
+        >>> response = rtn.delete('series', 78804)
+    """
+    path = self._get_path('delete').format(itemType=type, itemId=id)
+    
+    return self._DELETE(path)
+</code></pre>
   </div>
 </div>
 
@@ -2266,36 +2187,35 @@ Returns the API token.</p>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User_Ratings.get_token', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User_Ratings.get_token" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">get_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">forceNew</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get the existing token or creates it if it doesn&#39;t exist.</span>
-<span class="sd">    Returns the API token.</span>
-<span class="sd">    If `forceNew` is true  the function will do a new login to retrieve the token.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">KEYS</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span> <span class="ow">or</span> <span class="n">forceNew</span><span class="p">:</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">APIKeyError</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">&quot;USER&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">&quot;USER_KEY&quot;</span><span class="p">):</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;apikey&quot;</span><span class="p">:</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">,</span> <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER</span><span class="p">,</span> <span class="s2">&quot;userkey&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">USER_KEY</span><span class="p">}</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;apikey&quot;</span><span class="p">:</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_KEY</span><span class="p">}</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
-                <span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_complete_url</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">),</span> 
-                <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> 
-                <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_headers</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
-            <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">error</span> <span class="o">=</span> <span class="s2">&quot;Unknown error while authenticating. Check your api key or your user/userkey&quot;</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">error</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span>
-            <span class="k">except</span><span class="p">:</span>
-                <span class="k">pass</span>
-            <span class="k">raise</span> <span class="n">AuthenticationError</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span>
-</pre></div>
-
+    <pre><code>def get_token(self, forceNew=False):
+    """
+    Get the existing token or creates it if it doesn't exist.
+    Returns the API token.
+    If `forceNew` is true  the function will do a new login to retrieve the token.
+    """
+    from . import KEYS
+    if not KEYS.API_TOKEN or forceNew:
+        if not KEYS.API_KEY:
+            raise APIKeyError
+        if hasattr(self,"USER") and hasattr(self,"USER_KEY"):
+            data = {"apikey": KEYS.API_KEY, "username": self.USER, "userkey": self.USER_KEY}
+        else:
+            data={"apikey": KEYS.API_KEY}
+        response = requests.request(
+                'POST', self._get_complete_url('login'), 
+                data=json.dumps(data), 
+                headers=self._headers)
+        if response.status_code == 200:
+            KEYS.API_TOKEN = response.json()['token']
+        else:
+            error = "Unknown error while authenticating. Check your api key or your user/userkey"
+            try:
+                error = response.json()['error']
+            except:
+                pass
+            raise AuthenticationError(error)
+    return KEYS.API_TOKEN
+</code></pre>
   </div>
 </div>
 
@@ -2316,29 +2236,28 @@ Returns the API token.</p>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User_Ratings.page', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User_Ratings.page" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">page</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">page</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get the rating list for a specific page for the user.</span>
-<span class="sd">    </span>
-<span class="sd">    `page` is the rating page number.</span>
-<span class="sd">    Returns a list ratings available in the page.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">page</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES_LIST</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES_LIST</span><span class="p">[</span><span class="n">page</span><span class="p">]</span>
-    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">:</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;query&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+    <pre><code>def page(self, page):
+    """
+    Get the rating list for a specific page for the user.
     
-    <span class="n">filters</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    <span class="n">filters</span><span class="p">[</span><span class="s1">&#39;page&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">page</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span><span class="p">,</span> <span class="n">cleanJson</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-    <span class="k">if</span> <span class="s1">&#39;links&#39;</span> <span class="ow">in</span> <span class="n">response</span> <span class="ow">and</span> <span class="s1">&#39;last&#39;</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;links&#39;</span><span class="p">]:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;links&#39;</span><span class="p">][</span><span class="s1">&#39;last&#39;</span><span class="p">]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES_LIST</span><span class="p">[</span><span class="n">page</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
-</pre></div>
-
+    `page` is the rating page number.
+    Returns a list ratings available in the page.
+    """
+    if page in self._PAGES_LIST:
+        return self._PAGES_LIST[page]
+    if self._FILTERS:
+        path = self._get_path('query')
+    else:
+        path = self._get_path('all')
+    
+    filters = self._FILTERS.copy()
+    filters['page'] = page
+    response = self._GET(path, params=filters, cleanJson=False)
+    if 'links' in response and 'last' in response['links']:
+        self._PAGES = response['links']['last']
+    self._PAGES_LIST[page] = response['data']
+    return response['data']
+</code></pre>
   </div>
 </div>
 
@@ -2358,16 +2277,15 @@ Returns the API token.</p>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User_Ratings.pages', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User_Ratings.pages" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">pages</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get the number of rating pages available for filtered ratings of the specific user.</span>
-<span class="sd">    Returns the number of rating pages available with current filters.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_PAGES</span>
-</pre></div>
-
+    <pre><code>def pages(self):
+    """
+    Get the number of rating pages available for filtered ratings of the specific user.
+    Returns the number of rating pages available with current filters.
+    """
+    if self._PAGES < 0:
+        self.page(1)
+    return self._PAGES
+</code></pre>
   </div>
 </div>
 
@@ -2387,18 +2305,17 @@ Returns the API token.</p>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User_Ratings.query_params', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User_Ratings.query_params" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">query_params</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get the query parameters allowed for filtering and set it to `query_params` attribute.</span>
-<span class="sd">    Returns a list of parameters you can set to filters.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_id_path</span><span class="p">(</span><span class="s1">&#39;query_params&#39;</span><span class="p">)</span>
+    <pre><code>def query_params(self):
+    """
+    Get the query parameters allowed for filtering and set it to `query_params` attribute.
+    Returns a list of parameters you can set to filters.
+    """
+    path = self._get_id_path('query_params')
     
-    <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_GET</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_set_attrs_to_values</span><span class="p">({</span><span class="s1">&#39;query_params&#39;</span><span class="p">:</span> <span class="n">response</span><span class="p">})</span>
-    <span class="k">return</span> <span class="n">response</span>
-</pre></div>
-
+    response = self._GET(path)
+    self._set_attrs_to_values({'query_params': response})
+    return response
+</code></pre>
   </div>
 </div>
 
@@ -2418,24 +2335,23 @@ Returns the API token.</p>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User_Ratings.refresh_token', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User_Ratings.refresh_token" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">refresh_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Refresh the current token set in the module.</span>
-<span class="sd">    Returns the new obtained valid token for the API.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_set_token_header</span><span class="p">()</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
-        <span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_complete_url</span><span class="p">(</span><span class="s1">&#39;refresh_token&#39;</span><span class="p">),</span>
-        <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_headers</span><span class="p">)</span>
-    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-    <span class="n">jsn</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-    <span class="k">if</span> <span class="s1">&#39;token&#39;</span> <span class="ow">in</span> <span class="n">jsn</span><span class="p">:</span>
-        <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">KEYS</span>
-        <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span> <span class="o">=</span> <span class="n">jsn</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">KEYS</span><span class="o">.</span><span class="n">API_TOKEN</span>
-    <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-</pre></div>
-
+    <pre><code>def refresh_token(self):
+    """
+    Refresh the current token set in the module.
+    Returns the new obtained valid token for the API.
+    """
+    self._set_token_header()
+    response = requests.request(
+        'GET', self._get_complete_url('refresh_token'),
+        headers=self._headers)
+    response.raise_for_status()
+    jsn = response.json()
+    if 'token' in jsn:
+        from . import KEYS
+        KEYS.API_TOKEN = jsn['token']
+        return KEYS.API_TOKEN
+    return ''
+</code></pre>
   </div>
 </div>
 
@@ -2456,15 +2372,16 @@ Can be either 'series', 'episode', or 'banner'.</p></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-tvdbsimple.user.User_Ratings.update_filters', this);">Show source &equiv;</a></p>
   <div id="source-tvdbsimple.user.User_Ratings.update_filters" class="source">
-    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">update_filters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Set the filters for the user rating.</span>
-<span class="sd">    It&#39;s possible to provide `itemType` that filters ratings by type. </span>
-<span class="sd">    Can be either &#39;series&#39;, &#39;episode&#39;, or &#39;banner&#39;.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_FILTERS</span> <span class="o">=</span> <span class="n">kwargs</span>
-</pre></div>
-
+    <pre><code>def update_filters(self, **kwargs):
+    """
+    Set the filters for the user rating.
+    It's possible to provide `itemType` that filters ratings by type. 
+    Can be either 'series', 'episode', or 'banner'.
+    """
+    self._PAGES = -1
+    self._PAGES_LIST = {}
+    self._FILTERS = kwargs
+</code></pre>
   </div>
 </div>
 
