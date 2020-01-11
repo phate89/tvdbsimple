@@ -53,6 +53,6 @@ We can of course search for a tv show.. In this example I will search for doctor
 .. code-block:: python
 
     >>> search = tvdb.Search()
-    >>> reponse = search.series("doctor who 2005")
-    >>> search.series[0]['seriesName']
+    >>> reponse = search.tvseries("doctor who 2005")
+    >>> search[0]['seriesName']
     'Doctor Who (2005)'

@@ -1,1 +1,2 @@
 requests>=2.5
+deprecation>=2.0.7
