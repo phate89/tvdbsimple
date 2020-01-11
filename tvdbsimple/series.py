@@ -21,7 +21,7 @@ class Series(TVDB):
         'actors': '/{id}/actors'
     }
 
-    def __init__(self, id, language=''):
+    def __init__(self, id, language='', timeout=None):
         """
         Initialize the series class.
         `id` is the TheTVDb series id. You can also provide `language`, 
@@ -36,7 +36,7 @@ class Series(TVDB):
         """
         Allows to retrieve episodes info.
         """
-        TVDB.__init__(self, id)
+        TVDB.__init__(self, id, timeout)
 
     def info(self, language=''):
         """
@@ -272,7 +272,7 @@ class Series_Images(TVDB):
         'query_params': '/{id}/images/query/params'
     }
 
-    def __init__(self, id, language='', **kwargs):
+    def __init__(self, id, language='', timeout=None, **kwargs):
         """
         Initialize the class.
 
@@ -284,7 +284,7 @@ class Series_Images(TVDB):
         You can  provide `subKey` to get only episodes with the 
         provided subKey.
         """
-        TVDB.__init__(self, id)
+        TVDB.__init__(self, id, timeout)
         self._set_language(language)
         self.update_filters(**kwargs)
 

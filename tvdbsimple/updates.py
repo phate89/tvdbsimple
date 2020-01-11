@@ -21,7 +21,7 @@ class Updates(TVDB):
         'update_params': '/query/params'
     }
 
-    def __init__(self, fromTime, toTime='', language=''):
+    def __init__(self, fromTime, toTime='', language='', timeout=None):
         """
         Initialize the Updates class.
         `fromTime` is the epoch time to start your date range to search for.
@@ -30,7 +30,7 @@ class Updates(TVDB):
         You can also set `language` with a language id to get the result 
         in the specific language.
         """
-        TVDB.__init__(self)
+        TVDB.__init__(self, timeout)
         self._FILTERS = {}
         self.update_filters(fromTime, toTime, language)
 

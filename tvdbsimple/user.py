@@ -22,7 +22,7 @@ class User(TVDB):
         'alter_favorite': '/favorites/{id}'
     }
 
-    def __init__(self, user, key):
+    def __init__(self, user, key, timeout=None):
         """
         Initialize the User class.
 
@@ -30,7 +30,7 @@ class User(TVDB):
         authenticate with the user, you can find it in the 
         [account info](http://thetvdb.com/?tab=userinfo) under account identifier.
         """
-        TVDB.__init__(self, user=user, key=key)
+        TVDB.__init__(self, user=user, key=key, timeout=timeout)
         self.Ratings = User_Ratings(user, key)
         self._PAGES = []
         """

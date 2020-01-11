@@ -44,7 +44,7 @@ class TVDB(object):
     _URLS = {}
     _BASE_URI = 'https://api.thetvdb.com'
 
-    def __init__(self, id=0, user=None, key=None):
+    def __init__(self, id=0, user=None, key=None, timeout=None):
         """
         Initialize the base class.
 
@@ -60,6 +60,8 @@ class TVDB(object):
         """Stores username if available"""
         self.USER_KEY = key
         """Stores user-key if available"""
+        self.TIMEOUT = timeout
+        """Stores timeout request if available"""
 
     def _get_path(self, key):
         return self._BASE_PATH + self._URLS[key]
@@ -139,7 +141,8 @@ class TVDB(object):
         response = requests.request(
             method, url, params=params,
             data=json.dumps(payload) if payload else payload,
-            headers=self._headers)
+            headers=self._headers,
+            timeout=self.TIMEOUT)
 
         if response.status_code == 200:
             response.encoding = 'utf-8'

@@ -20,14 +20,14 @@ class Episode(TVDB):
         'info': '/{id}'
     }
 
-    def __init__(self, id, language=''):
+    def __init__(self, id, language='', timeout=None):
         """
         Initialize the episode class.
 
         `id` is the TheTVDb episode id. You can also provide `language`, 
         the language id you want to use to retrieve the info.
         """
-        TVDB.__init__(self, id)
+        TVDB.__init__(self, id, timeout)
         self._set_language(language)
 
     def info(self, language=''):
