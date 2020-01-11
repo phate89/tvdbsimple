@@ -451,7 +451,7 @@ class Series_Images(TVDB):
     def all(self, language=''):
         """
         Get all the images for a specific show and sets it to `images` attribute.
-        It needs to have at least one filter set.
+        It needs to have at least one filter set (one of resolution, subKey or keyType).
 
         You can  provide `language`, the language id you want to use to 
         retrieve the info.
