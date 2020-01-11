@@ -30,8 +30,9 @@ class User(TVDB):
         authenticate with the user, you can find it in the 
         [account info](http://thetvdb.com/?tab=userinfo) under account identifier.
         """
-        super(User, self).__init__(user=user, key=key)
+        TVDB.__init__(self, user=user, key=key)
         self.Ratings = User_Ratings(user, key)
+        self._PAGES = []
         """
         Allows to retrieve, add and delete user ratings.
         """
@@ -160,7 +161,7 @@ class User_Ratings(TVDB):
         It's possible to provide `itemType` that filters ratings by type. 
         Can be either 'series', 'episode', or 'banner'.
         """
-        super(User_Ratings, self).__init__(user=user, key=key)
+        TVDB.__init__(self, user=user, key=key)
         self.update_filters(**kwargs)
 
     def update_filters(self, **kwargs):

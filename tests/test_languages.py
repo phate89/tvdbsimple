@@ -20,15 +20,13 @@ LAN_NAME = 'English'
 
 class LanguagesTestCase(unittest.TestCase):
     def test_language_info(self):
-        id = LAN_ID
         name = LAN_NAME
+        id = LAN_ID
         lan = tvdb.Languages()
         response = lan.language(id)
         self.assertEqual(response['englishName'], name)
 
     def test_language_all(self):
-        id = LAN_ID
-        name = LAN_NAME
         lan = tvdb.Languages()
-        response = lan.all()
+        lan.all()
         self.assertTrue(hasattr(lan, 'all'))

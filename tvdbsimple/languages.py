@@ -7,9 +7,6 @@ Allows to retrieve the languages list and info.
 See [Languages API section](https://api.thetvdb.com/swagger#!/Languages)
 """
 from .base import TVDB
-import sys
-if sys.version_info > (2, 8):
-    from builtins import dict
 
 
 class Languages(TVDB):
@@ -90,8 +87,8 @@ class Languages(TVDB):
     def __getitem__(self, id):
         return self.language(id)
 
-    def __setitem__(self):
+    def __setitem__(self, attr, value):
         raise Exception('Function Disabled')
 
-    def __delitem__(self):
+    def __delitem__(self, attr):
         raise Exception('Function Disabled')

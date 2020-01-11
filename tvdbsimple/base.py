@@ -11,19 +11,24 @@ Handle automatically login, token creation and response basic stripping.
 import json
 import requests
 
+try:
+    from json.decoder import JSONDecodeError
+except ImportError:
+    JSONDecodeError = ValueError
+
 
 class AuthenticationError(Exception):
     """
     Authentication exception class for authentication errors
     """
-    pass
+    pass    # pylint: disable=unnecessary-pass
 
 
 class APIKeyError(Exception):
     """
     Missing API key exception class in case of missing api
     """
-    pass
+    pass    # pylint: disable=unnecessary-pass
 
 
 class TVDB(object):
@@ -120,7 +125,7 @@ class TVDB(object):
                          "Check your api key or your user/userkey")
                 try:
                     error = response.json()['Error']
-                except:
+                except (JSONDecodeError, KeyError):
                     pass
                 raise AuthenticationError(error)
         return KEYS.API_TOKEN
@@ -147,7 +152,7 @@ class TVDB(object):
                                  payload=payload, forceNewToken=True)
         try:
             raise Exception(response.json()['Error'])
-        except:
+        except (JSONDecodeError, KeyError):
             response.raise_for_status()
 
     def _GET(self, path, params=None, cleanJson=True):
@@ -162,7 +167,7 @@ class TVDB(object):
     def _PUT(self, path, params=None, payload=None, cleanJson=True):
         return self._request('PUT', path, params=params, payload=payload, cleanJson=cleanJson)
 
-    def _set_attrs_to_values(self, response={}):
+    def _set_attrs_to_values(self, response=None):
         """
         Set attributes to dictionary values.
 
@@ -172,6 +177,6 @@ class TVDB(object):
         >>> response = show.info()
         >>> show.title  # instead of response['title']
         """
-        if isinstance(response, dict):
+        if response and isinstance(response, dict):
             for key in response:
                 setattr(self, key, response[key])

@@ -36,7 +36,7 @@ class Series(TVDB):
         """
         Allows to retrieve episodes info.
         """
-        super(Series, self).__init__(id)
+        TVDB.__init__(self, id)
 
     def info(self, language=''):
         """
@@ -284,7 +284,7 @@ class Series_Images(TVDB):
         You can  provide `subKey` to get only episodes with the 
         provided subKey.
         """
-        super(Series_Images, self).__init__(id)
+        TVDB.__init__(self, id)
         self._set_language(language)
         self.update_filters(**kwargs)
 

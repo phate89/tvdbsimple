@@ -20,8 +20,8 @@ EP_TITLE = 'Flesh and Stone (2)'
 
 class EpisodeTestCase(unittest.TestCase):
     def test_episode_info(self):
-        id = EP_ID
+        tvid = EP_ID
         name = EP_TITLE
-        episode = tvdb.Episode(id)
-        response = episode.info()
-        self.assertEqual(episode.episodeName, name)
+        episode = tvdb.Episode(tvid)
+        episode.info()
+        self.assertEqual(episode.episodeName, name)   # pylint: disable=no-member

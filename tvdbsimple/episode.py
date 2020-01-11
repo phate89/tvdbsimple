@@ -27,7 +27,7 @@ class Episode(TVDB):
         `id` is the TheTVDb episode id. You can also provide `language`, 
         the language id you want to use to retrieve the info.
         """
-        super(Episode, self).__init__(id)
+        TVDB.__init__(self, id)
         self._set_language(language)
 
     def info(self, language=''):

@@ -30,6 +30,7 @@ class Updates(TVDB):
         You can also set `language` with a language id to get the result 
         in the specific language.
         """
+        TVDB.__init__(self)
         self._FILTERS = {}
         self.update_filters(fromTime, toTime, language)
 

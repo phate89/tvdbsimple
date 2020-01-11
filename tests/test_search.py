@@ -23,5 +23,6 @@ class SearchTestCase(unittest.TestCase):
         src = SRC_STR
         name = SRC_NAME
         search = tvdb.Search()
-        response = search.series(src)
+        search.series(src)
+        # pylint: disable=unsubscriptable-object
         self.assertEqual(search.series[0]['seriesName'], name)
