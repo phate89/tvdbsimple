@@ -17,6 +17,7 @@ Constants
 EP_ID = 1452931
 EP_TITLE = 'Flesh and Stone (2)'
 
+
 class EpisodeTestCase(unittest.TestCase):
     def test_episode_info(self):
         id = EP_ID
@@ -24,4 +25,3 @@ class EpisodeTestCase(unittest.TestCase):
         episode = tvdb.Episode(id)
         response = episode.info()
         self.assertEqual(episode.episodeName, name)
-

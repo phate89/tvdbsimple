@@ -6,10 +6,11 @@ Allows to retrieve the languages list and info.
 
 See [Languages API section](https://api.thetvdb.com/swagger#!/Languages)
 """
+from .base import TVDB
 import sys
 if sys.version_info > (2, 8):
     from builtins import dict
-from .base import TVDB
+
 
 class Languages(TVDB):
     """
@@ -42,9 +43,9 @@ class Languages(TVDB):
         """
         if self._ALL_PARSED:
             return self.LANGUAGES.values()
-            
+
         path = self._get_path('all')
-        
+
         response = self._GET(path)
         self._set_attrs_to_values({'all': response})
         for lang in response:
@@ -56,7 +57,7 @@ class Languages(TVDB):
     def language(self, id):
         """
         Get the language info for a specific language id.
-        
+
         `id` is the specific language id to retrieve.
 
         Returns a dict rwith all the language info.
@@ -76,7 +77,7 @@ class Languages(TVDB):
             return self.LANGUAGES[id]
 
         path = self._get_path('language').format(lid=id)
-        
+
         response = self._GET(path)
         if 'id' in response:
             self.LANGUAGES[response['id']] = response
@@ -91,6 +92,6 @@ class Languages(TVDB):
 
     def __setitem__(self):
         raise Exception('Function Disabled')
-        
+
     def __delitem__(self):
         raise Exception('Function Disabled')

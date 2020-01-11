@@ -9,6 +9,7 @@ See [Users API section](https://api.thetvdb.com/swagger#!/Users)
 
 from .base import TVDB
 
+
 class User(TVDB):
     """
     User class to retrieve, add and delete user favorites and ratings.
@@ -38,7 +39,7 @@ class User(TVDB):
     def info(self):
         """
         Get the basic user info and set its values to local attributes.
-        
+
         Returns a dict with all the information of the user.
 
         For example
@@ -53,7 +54,7 @@ class User(TVDB):
 
         """
         path = self._get_path('info')
-        
+
         response = self._GET(path)
         self._set_attrs_to_values(response)
         return response
@@ -62,7 +63,7 @@ class User(TVDB):
         """
         Get the a list of the favorite series of the user and
         sets it to `favorites` attribute.
-        
+
         Returns a list of the favorite series ids.
 
         For example
@@ -77,12 +78,12 @@ class User(TVDB):
 
         """
         path = self._get_path('favorites')
-        
+
         response = self._GET(path)
         self._set_attrs_to_values(response)
         return self._clean_return(response)
 
-    def _clean_return(self,jsn):
+    def _clean_return(self, jsn):
         if 'favorites' in jsn:
             return jsn['favorites']
         return jsn
@@ -90,7 +91,7 @@ class User(TVDB):
     def add_favorite(self, id):
         """
         Add a series to user favorite series from its series id.
-        
+
         `id` is the series id you want to add to favorites.
 
         Returns the updated list of the favorite series ids.
@@ -107,13 +108,13 @@ class User(TVDB):
 
         """
         path = self._get_path('alter_favorite').format(id=id)
-        
+
         return self._clean_return(self._PUT(path))
 
     def delete_favorite(self, id):
         """
         Delete a series from user favorite series from its series id.
-        
+
         `id` is the series id you want to delete from favorites.
 
         Returns the updated list of the favorite series ids.
@@ -130,8 +131,9 @@ class User(TVDB):
 
         """
         path = self._get_path('alter_favorite').format(id=id)
-        
+
         return self._clean_return(self._DELETE(path))
+
 
 class User_Ratings(TVDB):
     """
@@ -179,7 +181,7 @@ class User_Ratings(TVDB):
         Returns a list of parameters you can set to filters.
         """
         path = self._get_id_path('query_params')
-        
+
         response = self._GET(path)
         self._set_attrs_to_values({'query_params': response})
         return response
@@ -197,7 +199,7 @@ class User_Ratings(TVDB):
     def add(self, type, id, rating):
         """
         Add a new rating to the user's ratings..
-        
+
         `type` is the item type of the item you want to rate. Can be either 
         'series', 'episode', or 'image'.
         `id` is the ID of the item that you want to rate.
@@ -215,13 +217,13 @@ class User_Ratings(TVDB):
 
         """
         path = self._get_path('add').format(itemType=type, itemId=id, itemRating=rating)
-        
+
         return self._PUT(path)
 
     def delete(self, type, id):
         """
         Delete an existing user's rating..
-        
+
         `type` is the item type of the item rating you want to delete. Can be either 
         'series', 'episode', or 'image'.
         `id` is the ID of the item rating that you want to delete.
@@ -238,14 +240,14 @@ class User_Ratings(TVDB):
 
         """
         path = self._get_path('delete').format(itemType=type, itemId=id)
-        
+
         return self._DELETE(path)
 
     def all(self):
         """
         Get the full rating list filtered for the user and adds it
         to the `ratings` attribute.
-        
+
         Returns a list of ratings info.
 
         For example
@@ -260,16 +262,16 @@ class User_Ratings(TVDB):
 
         """
         ratings = []
-        for i in range (1, self.pages()+1):
+        for i in range(1, self.pages()+1):
             ratings.extend(self.page(i))
-        
+
         self._set_attrs_to_values({'ratings': ratings})
         return ratings
 
     def page(self, page):
         """
         Get the rating list for a specific page for the user.
-        
+
         `page` is the rating page number.
 
         Returns a list ratings available in the page.
@@ -280,7 +282,7 @@ class User_Ratings(TVDB):
             path = self._get_path('query')
         else:
             path = self._get_path('all')
-        
+
         filters = self._FILTERS.copy()
         filters['page'] = page
         response = self._GET(path, params=filters, cleanJson=False)
@@ -291,5 +293,5 @@ class User_Ratings(TVDB):
         return response['data']
 
     def __iter__(self):
-        for i in range (1, self.pages()+1):
+        for i in range(1, self.pages()+1):
             yield self.page(i)

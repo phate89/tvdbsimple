@@ -9,6 +9,7 @@ See [Updates API section](https://api.thetvdb.com/swagger#!/Updates)
 
 from .base import TVDB
 
+
 class Updates(TVDB):
     """
     Updates class to retrieve updated series in a timespan.
@@ -56,7 +57,7 @@ class Updates(TVDB):
         Returns a list of series updated in the timespan with basic info
         """
         path = self._get_path('query')
-        
+
         response = self._GET(path, params=self._FILTERS)
         self._set_attrs_to_values({'series': response})
         return response
@@ -68,7 +69,7 @@ class Updates(TVDB):
         Returns a list of filters available for updates.
         """
         path = self._get_path('update_params')
-        
+
         response = self._GET(path)
         self._set_attrs_to_values({'update_params': response})
         return response

@@ -18,11 +18,13 @@ class AuthenticationError(Exception):
     """
     pass
 
+
 class APIKeyError(Exception):
     """
     Missing API key exception class in case of missing api
     """
     pass
+
 
 class TVDB(object):
     """
@@ -31,8 +33,8 @@ class TVDB(object):
     [See Authentication API section](https://api.thetvdb.com/swagger#!/Authentication)
     """
     _headers = {'Content-Type': 'application/json',
-               'Accept': 'application/json',
-               'Connection': 'close'}
+                'Accept': 'application/json',
+                'Connection': 'close'}
     _BASE_PATH = ''
     _URLS = {}
     _BASE_URI = 'https://api.thetvdb.com'
@@ -40,7 +42,7 @@ class TVDB(object):
     def __init__(self, id=0, user=None, key=None):
         """
         Initialize the base class.
-        
+
         You can provide `id` that is the item id used for url creation. You can also 
         provide `user`, that is the username for login. 
         You can also provide `key`, that is the userkey needed to 
@@ -66,7 +68,7 @@ class TVDB(object):
     def _set_language(self, language):
         if language:
             self._headers['Accept-Language'] = language
-    
+
     def refresh_token(self):
         """
         Refresh the current token set in the module.
@@ -102,19 +104,20 @@ class TVDB(object):
             if not KEYS.API_KEY:
                 raise APIKeyError
 
-            if hasattr(self,"USER") and hasattr(self,"USER_KEY"):
+            if hasattr(self, "USER") and hasattr(self, "USER_KEY"):
                 data = {"apikey": KEYS.API_KEY, "username": self.USER, "userkey": self.USER_KEY}
             else:
-                data={"apikey": KEYS.API_KEY}
+                data = {"apikey": KEYS.API_KEY}
 
             response = requests.request(
-                    'POST', self._get_complete_url('login'), 
-                    data=json.dumps(data), 
-                    headers=self._headers)
+                'POST', self._get_complete_url('login'),
+                data=json.dumps(data),
+                headers=self._headers)
             if response.status_code == 200:
                 KEYS.API_TOKEN = response.json()['token']
             else:
-                error = "Unknown error while authenticating. Check your api key or your user/userkey"
+                error = ("Unknown error while authenticating. "
+                         "Check your api key or your user/userkey")
                 try:
                     error = response.json()['Error']
                 except:
@@ -122,16 +125,17 @@ class TVDB(object):
                 raise AuthenticationError(error)
         return KEYS.API_TOKEN
 
-    def _request(self, method, path, params=None, payload=None, forceNewToken=False, cleanJson = True):
+    def _request(self, method, path, params=None, payload=None,
+                 forceNewToken=False, cleanJson=True):
         self._set_token_header(forceNewToken)
-        
+
         url = self._get_complete_url(path)
 
         response = requests.request(
-            method, url, params=params, 
+            method, url, params=params,
             data=json.dumps(payload) if payload else payload,
             headers=self._headers)
-        
+
         if response.status_code == 200:
             response.encoding = 'utf-8'
             jsn = response.json()
@@ -139,22 +143,23 @@ class TVDB(object):
                 return jsn['data']
             return jsn
         elif not forceNewToken:
-            return self._request(method=method, path=path, params=params, payload=payload, forceNewToken=True)
+            return self._request(method=method, path=path, params=params,
+                                 payload=payload, forceNewToken=True)
         try:
             raise Exception(response.json()['Error'])
         except:
             response.raise_for_status()
 
-    def _GET(self, path, params=None, cleanJson = True):
+    def _GET(self, path, params=None, cleanJson=True):
         return self._request('GET', path, params=params, cleanJson=cleanJson)
 
-    def _POST(self, path, params=None, payload=None, cleanJson = True):
+    def _POST(self, path, params=None, payload=None, cleanJson=True):
         return self._request('POST', path, params=params, payload=payload, cleanJson=cleanJson)
 
-    def _DELETE(self, path, params=None, payload=None, cleanJson = True):
+    def _DELETE(self, path, params=None, payload=None, cleanJson=True):
         return self._request('DELETE', path, params=params, payload=payload, cleanJson=cleanJson)
 
-    def _PUT(self, path, params=None, payload=None, cleanJson = True):
+    def _PUT(self, path, params=None, payload=None, cleanJson=True):
         return self._request('PUT', path, params=params, payload=payload, cleanJson=cleanJson)
 
     def _set_attrs_to_values(self, response={}):

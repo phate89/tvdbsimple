@@ -17,6 +17,7 @@ Constants
 """
 SERIES_ID = "2738" + str(sys.version_info.major) + str(sys.version_info.minor)
 
+
 class UserTestCase(unittest.TestCase):
     def test_user_info(self):
         user = tvdb.User(USER, USER_KEY)
@@ -36,7 +37,7 @@ class UserTestCase(unittest.TestCase):
     def test_user_delete_favorite(self):
         user = tvdb.User(USER, USER_KEY)
         response = user.delete_favorite(SERIES_ID)
-        self.assertTrue(SERIES_ID  not in response)
+        self.assertTrue(SERIES_ID not in response)
 
     def test_user_favorites(self):
         user = tvdb.User(USER, USER_KEY)

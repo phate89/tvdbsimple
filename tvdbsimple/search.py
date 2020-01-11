@@ -9,6 +9,7 @@ See [Search API section](https://api.thetvdb.com/swagger#!/Search)
 
 from .base import TVDB
 
+
 class Search(TVDB):
     """
     Class that allow to search for series with filters.
@@ -59,7 +60,7 @@ class Search(TVDB):
     def series_params(self):
         """
         Return the available search params.
-        
+
         Returns:
             A dict respresentation of the JSON returned from the API.
         """

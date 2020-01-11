@@ -63,7 +63,7 @@ from .episode import Episode
 from .updates import Updates
 from .user import User, User_Ratings
 
-KEYS=keys()
+KEYS = keys()
 """
 Contains `API_KEY` and `API_TOKEN`.
 

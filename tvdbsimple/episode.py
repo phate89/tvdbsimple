@@ -9,6 +9,7 @@ See [Episodes API section](https://api.thetvdb.com/swagger#!/Episodes)
 
 from .base import TVDB
 
+
 class Episode(TVDB):
     """
     Episode class to retrieve detailed info about an episode.
@@ -48,7 +49,7 @@ class Episode(TVDB):
 
         """
         path = self._get_id_path('info')
-        
+
         self._set_language(language)
         response = self._GET(path)
         self._set_attrs_to_values(response)
