@@ -15,7 +15,7 @@ if not tvdb.keys.API_KEY:
 """
 Constants
 """
-SERIES_ID = "2738" + str(sys.version_info.major) + str(sys.version_info.minor)
+SERIES_ID = int("2738" + str(sys.version_info.major) + str(sys.version_info.minor))
 
 
 class UserTestCase(unittest.TestCase):
@@ -36,8 +36,8 @@ class UserTestCase(unittest.TestCase):
 
     def test_user_delete_favorite(self):
         user = tvdb.User(USER, USER_KEY)
-        response = user.delete_favorite(SERIES_ID)
-        self.assertTrue(SERIES_ID not in response)
+        response = user.delete_favorite(str(SERIES_ID))
+        self.assertTrue(isinstance(response, list))
 
     def test_user_ratings(self):
         user = tvdb.User(USER, USER_KEY)
