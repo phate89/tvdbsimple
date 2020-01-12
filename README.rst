@@ -15,7 +15,7 @@ Features
 - Full API implementation. Supports Search, Series, Episode, Updated, User and Languages methods.
 - Updated with the latest JSON API. 
 - Fully tested with automated tests and travis.ci.
-- Supports Python 2.7, 3.3, 3.4, 3.5, 3.6.
+- Supports Python 2.7, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8.
 - Easy to access data using Python class attributes.
 - Easy to experiment with *tvdbsimple* functions inside the Python interpreter.
 
