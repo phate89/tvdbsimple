@@ -72,3 +72,12 @@ You can also provide an `API_TOKEN` if you already have a valid one stored. If t
 valid token doesn't work anymore the module will try to retrieve a new one
 using the `API_KEY` variable
 """
+
+SESSION = None
+"""
+Session to be used if provided.
+This allows a session to be preconfigured for caching, proxying, etc.
+>>> import requests
+>>> import tvdbsimple
+>>> tvdbsimple.SESSION = requests.Session()
+"""
