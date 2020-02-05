@@ -44,7 +44,7 @@ class TVDB(object):
     _URLS = {}
     _BASE_URI = 'https://api.thetvdb.com'
 
-    def __init__(self, id=0, user=None, key=None, timeout=None):
+    def __init__(self, id=0, user=None, key=None, timeout=None, session=None):
         """
         Initialize the base class.
 
@@ -62,6 +62,8 @@ class TVDB(object):
         """Stores user-key if available"""
         self.TIMEOUT = timeout
         """Stores timeout request if available"""
+        self.SESSION = session
+        """Use a provided session if available"""
 
     def _get_path(self, key):
         return self._BASE_PATH + self._URLS[key]
@@ -71,6 +73,14 @@ class TVDB(object):
 
     def _get_complete_url(self, path):
         return '{base_uri}/{path}'.format(base_uri=self._BASE_URI, path=path)
+
+    @property
+    def __get_session(self):
+        """
+        Uses the first valid session from this class, the module, or a default requests session
+        """
+        from . import SESSION
+        return self.SESSION or SESSION or requests
 
     def _set_language(self, language):
         if language:
@@ -84,7 +94,7 @@ class TVDB(object):
         """
         self._set_token_header()
 
-        response = requests.request(
+        response = self.__get_session.request(
             'GET', self._get_complete_url('refresh_token'),
             headers=self._headers)
 
@@ -116,7 +126,7 @@ class TVDB(object):
             else:
                 data = {"apikey": KEYS.API_KEY}
 
-            response = requests.request(
+            response = self.__get_session.request(
                 'POST', self._get_complete_url('login'),
                 data=json.dumps(data),
                 headers=self._headers)
@@ -138,7 +148,7 @@ class TVDB(object):
 
         url = self._get_complete_url(path)
 
-        response = requests.request(
+        response = self.__get_session.request(
             method, url, params=params,
             data=json.dumps(payload) if payload else payload,
             headers=self._headers,
